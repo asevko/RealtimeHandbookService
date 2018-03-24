@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/ably-java-develop/android/src/androidTest/java" />
+      <root url="file://$USER_HOME$/Downloads/ably-java-develop/android/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/ably-java-develop/java/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/ably-java-develop/java/src/test/java" />
+      <root url="file://$USER_HOME$/Downloads/ably-java-develop/lib/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/ably-java-develop/lib/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

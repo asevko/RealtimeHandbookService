@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: nl.cloudfarming.client:lib-swingx:1.6.1-NB72-NO-WS">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/nl/cloudfarming/client/lib-swingx/1.6.1-NB72-NO-WS/lib-swingx-1.6.1-NB72-NO-WS.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/nl/cloudfarming/client/lib-swingx/1.6.1-NB72-NO-WS/lib-swingx-1.6.1-NB72-NO-WS-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/nl/cloudfarming/client/lib-swingx/1.6.1-NB72-NO-WS/lib-swingx-1.6.1-NB72-NO-WS-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

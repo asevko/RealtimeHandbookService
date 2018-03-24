@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: eu.agrosense.api:model:14.06-beta">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/eu/agrosense/api/model/14.06-beta/model-14.06-beta.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/eu/agrosense/api/model/14.06-beta/model-14.06-beta-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/eu/agrosense/api/model/14.06-beta/model-14.06-beta-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

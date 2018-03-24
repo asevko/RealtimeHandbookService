@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: eu.agrosense.client:lib-dolphin:0.8.3-NB72">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/eu/agrosense/client/lib-dolphin/0.8.3-NB72/lib-dolphin-0.8.3-NB72.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/eu/agrosense/client/lib-dolphin/0.8.3-NB72/lib-dolphin-0.8.3-NB72-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/eu/agrosense/client/lib-dolphin/0.8.3-NB72/lib-dolphin-0.8.3-NB72-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

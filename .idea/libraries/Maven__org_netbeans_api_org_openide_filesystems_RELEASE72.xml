@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.netbeans.api:org-openide-filesystems:RELEASE72">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/netbeans/api/org-openide-filesystems/RELEASE72/org-openide-filesystems-RELEASE72.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/netbeans/api/org-openide-filesystems/RELEASE72/org-openide-filesystems-RELEASE72-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/netbeans/api/org-openide-filesystems/RELEASE72/org-openide-filesystems-RELEASE72-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

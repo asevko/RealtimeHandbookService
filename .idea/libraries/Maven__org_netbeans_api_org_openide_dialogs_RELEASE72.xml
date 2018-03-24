@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.netbeans.api:org-openide-dialogs:RELEASE72">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/netbeans/api/org-openide-dialogs/RELEASE72/org-openide-dialogs-RELEASE72.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/netbeans/api/org-openide-dialogs/RELEASE72/org-openide-dialogs-RELEASE72-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/netbeans/api/org-openide-dialogs/RELEASE72/org-openide-dialogs-RELEASE72-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
