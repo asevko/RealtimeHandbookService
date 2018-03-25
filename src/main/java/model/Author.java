@@ -2,7 +2,6 @@ package model;
 
 public class Author {
 
-    private String uid;
     private String name;
     private String surname;
 
@@ -30,11 +29,4 @@ public class Author {
         return surname;
     }
 
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
 }

@@ -124,6 +124,21 @@ public class Storage {
                 .removeValueAsync();
     }
 
+    public void addBook(String bookName) {
+        ref.push()
+                .child("name")
+                .setValueAsync(bookName);
+    }
+
+    public void addChapter(String bookUid, String chapterName) {
+        ref.child(bookUid)
+                .child("chapters")
+                .push()
+                .child("name")
+                .setValueAsync(chapterName);
+
+    }
+
     private class UpdateBookListListener implements ChildEventListener {
 
         private final Callable callback;

@@ -9,6 +9,8 @@ import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 
 public class InformationView implements Callable {
@@ -38,6 +40,7 @@ public class InformationView implements Callable {
         createPanel();
         addLabelsToPanel();
         createTreeView();
+        addButtonsToPanel();
         requestBookList();
     }
 
@@ -58,6 +61,40 @@ public class InformationView implements Callable {
         panel.add(chapters, constraints);
     }
 
+    private void addButtonsToPanel() {
+        JButton addBookButton = new JButton("+");
+        addBookButton.addActionListener(event -> {
+            String bookName  = (String) JOptionPane.showInputDialog(panel.getParent(),
+                    "Enter book name", "New book", JOptionPane.INFORMATION_MESSAGE,
+                    null, null, "Awesome book name");
+            if (bookName != null && !bookName.isEmpty()) {
+                bookVewModel.addBook(bookName);
+            }
+        });
+        addBookButton.setPreferredSize(new Dimension(width / 3, 20));
+        constraints.gridx = 0;
+        constraints.gridy = 2;
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.weighty = 0.03;
+        panel.add(addBookButton, constraints);
+
+
+        JButton addChapterButton = new JButton("+");
+        addChapterButton.addActionListener(event -> {
+            String chapterName  = (String) JOptionPane.showInputDialog(panel.getParent(),
+                    "Enter chapter name", "New chapter", JOptionPane.INFORMATION_MESSAGE,
+                    null, null, "Awesome chapter name");
+            boolean canAddChapter = chapterName != null &&
+                    !chapterName.isEmpty();
+            if (canAddChapter) {
+                bookVewModel.addChapter(chapterName, this);
+            }
+        });
+        addBookButton.setPreferredSize(new Dimension(width / 3, 20));
+        constraints.gridx = 1;
+        panel.add(addChapterButton, constraints);
+    }
+
     private void createTreeView() {
         bookTreeModel = new SectionTreeModel();
         constraints.weighty= 0.97;
@@ -71,35 +108,39 @@ public class InformationView implements Callable {
                 if (e.getClickCount() == 2) {
                     super.mouseClicked(e);
                     DefaultMutableTreeNode clickedNode = (DefaultMutableTreeNode) bookList.getLastSelectedPathComponent();
-                    CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
-                    String bookUid = entry.getKey();
-                    chapterTreeModel.removeAllChild();
-                    requestBookChapters(bookUid);
-                    bookVewModel.setActiveBookUid(bookUid);
-                    bookVewModel.setActiveChapterUid(null);
+                    if (clickedNode != null) {
+                        CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
+                        String bookUid = entry.getKey();
+                        chapterTreeModel.removeAllChild();
+                        requestBookChapters(bookUid);
+                        bookVewModel.setActiveBookUid(bookUid);
+                        bookVewModel.setActiveChapterUid(null);
+                    }
                 }
                 if (SwingUtilities.isRightMouseButton(e)) {
                     int row = bookList.getClosestRowForLocation(e.getX(), e.getY());
                     bookList.setSelectionRow(row);
                     DefaultMutableTreeNode clickedNode = (DefaultMutableTreeNode) bookList.getLastSelectedPathComponent();
-                    CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
-                    String key = entry.getKey();
-                    String oldName = entry.getValue();
-                    JPopupMenu popupMenu = new JPopupMenu();
-                    JMenuItem rename = new JMenuItem("Rename");
-                    rename.addActionListener(event -> {
-                        String newName = JOptionPane.showInputDialog(panel.getParent(),
-                                "Enter new book name", oldName);
-                        if (!newName.equals("")) {
-                            bookVewModel.renameBook(new CustomPair<>(key, newName));
-                        }
-                    });
-                    popupMenu.add(rename);
-                    popupMenu.add(new JPopupMenu.Separator());
-                    JMenuItem delete = new JMenuItem("Delete");
-                    delete.addActionListener(event -> bookVewModel.removeBook(key));
-                    popupMenu.add(delete);
-                    bookList.setComponentPopupMenu(popupMenu);
+                    if (clickedNode != null) {
+                        CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
+                        String key = entry.getKey();
+                        String oldName = entry.getValue();
+                        JPopupMenu popupMenu = new JPopupMenu();
+                        JMenuItem rename = new JMenuItem("Rename");
+                        rename.addActionListener(event -> {
+                            String newName = JOptionPane.showInputDialog(panel.getParent(),
+                                    "Enter new book name", oldName);
+                            if (!newName.equals("")) {
+                                bookVewModel.renameBook(new CustomPair<>(key, newName));
+                            }
+                        });
+                        popupMenu.add(rename);
+                        popupMenu.add(new JPopupMenu.Separator());
+                        JMenuItem delete = new JMenuItem("Delete");
+                        delete.addActionListener(event -> bookVewModel.removeBook(key));
+                        popupMenu.add(delete);
+                        bookList.setComponentPopupMenu(popupMenu);
+                    }
                 }
             }
         });
@@ -120,33 +161,37 @@ public class InformationView implements Callable {
                 if (e.getClickCount() == 2) {
                     super.mouseClicked(e);
                     DefaultMutableTreeNode clickedNode = (DefaultMutableTreeNode) chapterLists.getLastSelectedPathComponent();
-                    CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
-                    String chapterUid = entry.getKey();
-                    bookVewModel.requestChapter(chapterUid);
-                    bookVewModel.setActiveChapterUid(chapterUid);
+                    if (clickedNode != null) {
+                        CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
+                        String chapterUid = entry.getKey();
+                        bookVewModel.requestChapter(chapterUid);
+                        bookVewModel.setActiveChapterUid(chapterUid);
+                    }
                 }
                 if (SwingUtilities.isRightMouseButton(e)) {
                     int row = chapterLists.getClosestRowForLocation(e.getX(), e.getY());
                     chapterLists.setSelectionRow(row);
                     DefaultMutableTreeNode clickedNode = (DefaultMutableTreeNode) chapterLists.getLastSelectedPathComponent();
-                    CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
-                    String key = entry.getKey();
-                    String oldName = entry.getValue();
-                    JPopupMenu popupMenu = new JPopupMenu();
-                    JMenuItem rename = new JMenuItem("Rename");
-                    rename.addActionListener(event -> {
-                        String newName = JOptionPane.showInputDialog(panel.getParent(),
-                                "Enter new chapter name", oldName);
-                        if (newName != null && !newName.isEmpty()) {
-                            bookVewModel.renameBookChapter(new CustomPair<>(key, newName));
-                        }
-                    });
-                    popupMenu.add(rename);
-                    popupMenu.add(new JPopupMenu.Separator());
-                    JMenuItem delete = new JMenuItem("Delete");
-                    delete.addActionListener(event -> bookVewModel.removeChapter(key));
-                    popupMenu.add(delete);
-                    chapterLists.setComponentPopupMenu(popupMenu);
+                    if (clickedNode != null) {
+                        CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
+                        String key = entry.getKey();
+                        String oldName = entry.getValue();
+                        JPopupMenu popupMenu = new JPopupMenu();
+                        JMenuItem rename = new JMenuItem("Rename");
+                        rename.addActionListener(event -> {
+                            String newName = JOptionPane.showInputDialog(panel.getParent(),
+                                    "Enter new chapter name", oldName);
+                            if (newName != null && !newName.isEmpty()) {
+                                bookVewModel.renameBookChapter(new CustomPair<>(key, newName));
+                            }
+                        });
+                        popupMenu.add(rename);
+                        popupMenu.add(new JPopupMenu.Separator());
+                        JMenuItem delete = new JMenuItem("Delete");
+                        delete.addActionListener(event -> bookVewModel.removeChapter(key));
+                        popupMenu.add(delete);
+                        chapterLists.setComponentPopupMenu(popupMenu);
+                    }
                 }
             }
         });

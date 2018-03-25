@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Handbook {
 
-    private String uid;
     private String name;
     private ArrayList<Author> authors;
     private ArrayList<Chapter> chapters;
@@ -39,13 +38,5 @@ public class Handbook {
 
     public void setChapters(ArrayList<Chapter> chapters) {
         this.chapters = chapters;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
-
-    public String getUid() {
-        return uid;
     }
 }

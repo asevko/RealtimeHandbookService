@@ -2,7 +2,6 @@ package model;
 
 public class Chapter {
 
-    private String uid;
     private String name;
     private String description;
     private String text;
@@ -37,13 +36,5 @@ public class Chapter {
 
     public void setText(String text) {
         this.text = text;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
     }
 }

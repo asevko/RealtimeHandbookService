@@ -109,4 +109,16 @@ public class BookVewModel {
         storage.removeBook(bookUid);
     }
 
+    public void addBook(String bookName) {
+        storage.addBook(bookName);
+    }
+
+    public void addChapter(String chapterName, Callable callback) {
+        if (activeBookUid != null) {
+            storage.addChapter(activeBookUid, chapterName);
+        } else  {
+            callback.error("Please, choose for which book you are adding a chapter and try again");
+        }
+    }
+
 }
