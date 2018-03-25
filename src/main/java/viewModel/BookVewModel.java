@@ -2,7 +2,7 @@ package viewModel;
 
 import model.CustomPair;
 import model.Chapter;
-import storage.Callable;
+import model.Callable;
 import storage.Storage;
 
 import java.util.HashMap;
@@ -97,6 +97,16 @@ public class BookVewModel {
     public void updateChapter(String description, String text) {
         String chapterName = chaptersHash.get(activeChapterUid);
         storage.updateChapter(activeBookUid, activeChapterUid, new Chapter(chapterName, description, text));
+    }
+
+    public void removeChapter(String chapterUid) {
+        chaptersHash.remove(chapterUid);
+        storage.removeChapter(activeBookUid, chapterUid);
+    }
+
+    public void removeBook(String bookUid) {
+        booksHash.remove(bookUid);
+        storage.removeBook(bookUid);
     }
 
 }

@@ -44,6 +44,21 @@ public class SectionTreeModel implements TreeModel {
         }
     }
 
+    public void removeSection(CustomPair<String, String> value) {
+        int index = 0;
+        int childCount = root.getChildCount();
+        while (index < childCount) {
+            DefaultMutableTreeNode node = (DefaultMutableTreeNode) treeModel.getChild(root, index);
+            CustomPair<String, String> currentValue = (CustomPair<String, String>)node.getUserObject();
+            if (currentValue.equals(value)) {
+                root.remove(index);
+                treeModel.reload(root);
+                return;
+            }
+            index++;
+        }
+    }
+
     public void removeAllChild() {
         int index = 0;
         int childCount = root.getChildCount();

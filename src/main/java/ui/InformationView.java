@@ -2,7 +2,7 @@ package ui;
 
 import model.CustomPair;
 import org.apache.log4j.Logger;
-import storage.Callable;
+import model.Callable;
 import viewModel.BookVewModel;
 
 import javax.swing.*;
@@ -38,6 +38,7 @@ public class InformationView implements Callable {
         createPanel();
         addLabelsToPanel();
         createTreeView();
+        requestBookList();
     }
 
     private void createPanel() {
@@ -75,6 +76,7 @@ public class InformationView implements Callable {
                     chapterTreeModel.removeAllChild();
                     requestBookChapters(bookUid);
                     bookVewModel.setActiveBookUid(bookUid);
+                    bookVewModel.setActiveChapterUid(null);
                 }
                 if (SwingUtilities.isRightMouseButton(e)) {
                     int row = bookList.getClosestRowForLocation(e.getX(), e.getY());
@@ -95,7 +97,7 @@ public class InformationView implements Callable {
                     popupMenu.add(rename);
                     popupMenu.add(new JPopupMenu.Separator());
                     JMenuItem delete = new JMenuItem("Delete");
-                    //add deleting book
+                    delete.addActionListener(event -> bookVewModel.removeBook(key));
                     popupMenu.add(delete);
                     bookList.setComponentPopupMenu(popupMenu);
                 }
@@ -135,14 +137,14 @@ public class InformationView implements Callable {
                     rename.addActionListener(event -> {
                         String newName = JOptionPane.showInputDialog(panel.getParent(),
                                 "Enter new chapter name", oldName);
-                        if (!newName.equals("")) {
+                        if (newName != null && !newName.isEmpty()) {
                             bookVewModel.renameBookChapter(new CustomPair<>(key, newName));
                         }
                     });
                     popupMenu.add(rename);
                     popupMenu.add(new JPopupMenu.Separator());
                     JMenuItem delete = new JMenuItem("Delete");
-                    //add deleting book
+                    delete.addActionListener(event -> bookVewModel.removeChapter(key));
                     popupMenu.add(delete);
                     chapterLists.setComponentPopupMenu(popupMenu);
                 }
@@ -162,7 +164,7 @@ public class InformationView implements Callable {
         bookVewModel.getBookChapters(bookUid, this);
     }
 
-    public void requestBookList() {
+    private void requestBookList() {
         bookVewModel.requestBookList(this);
     }
 
@@ -218,6 +220,18 @@ public class InformationView implements Callable {
 
     @Override
     public void remove(Object obj, String event) {
-
+        logger.info("InformationView remove(" + obj + ", " + event + ")");
+        CustomPair<String, String> entry = (CustomPair<String, String>)obj;
+        String key = entry.getKey();
+        switch (event) {
+            case "books":
+                bookVewModel.removeBookHash(key);
+                bookTreeModel.removeSection(entry);
+                break;
+            case "chapters":
+                bookVewModel.removeChapterHash(key);
+                chapterTreeModel.removeSection(entry);
+                break;
+        }
     }
 }

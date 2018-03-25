@@ -6,28 +6,13 @@ import com.google.firebase.FirebaseOptions;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 
 import com.google.firebase.database.*;
-import model.CustomPair;
-import model.Author;
-import model.Chapter;
-import model.Handbook;
+import model.*;
 import org.apache.log4j.Logger;
 
 
 public class Storage {
-
-
-    private enum Section {
-        authors("authors"), chapters("chapters"), name("name");
-
-        String str;
-
-        Section(String str) {
-            this.str = str;
-        }
-    }
 
     private static Storage instance;
     private static final Object lock = new Object();
@@ -46,8 +31,6 @@ public class Storage {
     private final static Logger logger = Logger.getLogger(Storage.class);
 
     private DatabaseReference ref;
-    private FileInputStream serviceAccount;
-    private FirebaseOptions options;
 
     private UpdateChapterListListener updateChapterListListener;
     private UpdateChapterListener updateChapterListener;
@@ -64,9 +47,9 @@ public class Storage {
     }
 
     private void initializeApp() throws IOException {
-        serviceAccount = new FileInputStream("src/main/resources/realtimehandbookservce-firebase-adminsdk-ty3to-24c90c1cac.json");
+        FileInputStream serviceAccount = new FileInputStream("src/main/resources/realtimehandbookservce-firebase-adminsdk-ty3to-24c90c1cac.json");
 
-        options = new FirebaseOptions.Builder()
+        FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                 .setDatabaseUrl("https://realtimehandbookservce.firebaseio.com/")
                 .build();
@@ -80,143 +63,6 @@ public class Storage {
         updateChapterListListener = new UpdateChapterListListener(null);
         updateChapterListener = new UpdateChapterListener(null);
     }
-
-    private ArrayList<Author> getAuthorsFrom(DataSnapshot dataSnapshot) {
-        ArrayList<Author> authors = new ArrayList<>();
-        dataSnapshot.getChildren()
-                .forEach(snap -> {
-                    Author author = snap.getValue(Author.class);
-                    author.setUid(snap.getKey());
-                    authors.add(author);
-                });
-        return authors;
-    }
-
-    private ArrayList<Chapter> getChaptersFrom(DataSnapshot dataSnapshot) {
-        ArrayList<Chapter> chapters = new ArrayList<>();
-        dataSnapshot.getChildren()
-                .forEach(snap -> {
-                    Chapter chapter = snap.getValue(Chapter.class);
-                    chapter.setUid(snap.getKey());
-                    chapters.add(chapter);
-                });
-        return  chapters;
-    }
-
-    public void handleBooks(Callable callable) {
-//        DatabaseReference reference= ref.push();
-//        reference.child("name").setValueAsync("C++Handbook");
-//        DatabaseReference authRef = reference.child("authors");
-//        authRef.push().setValueAsync(new Author("Alexei", "Siauko"));
-//        authRef.push().setValueAsync(new Author("Ivan", "Ivanov"));
-//        DatabaseReference chpRef = reference.child("chapters");
-//        chpRef.push().setValueAsync(new Chapter("Chapter 1", "Just intro", "Welcome to our world"));\
-
-        ref.child("-L8ENetYYOSk5YKOzfd8")
-                .child("chapters")
-                .child("-L8ENeteZdWM8I47Tkh5")
-                .setValueAsync(new Chapter("Chapter 1", "Just intro", "Welcome to our world"));
-
-        ArrayList<Author> authors = new ArrayList<>();
-        authors.add(new Author("Check", "Iren"));
-        authors.add(new Author("Alexei", "Siauko"));
-
-        ArrayList<Chapter> chapters = new ArrayList<>();
-        chapters.add(new Chapter("Chapter 1", "Just intro", "Welcome to our world"));
-
-        Handbook handbook = new Handbook("JavaHandbook", authors, chapters);
-
-        saveBook(handbook);
-
-        ref.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                dataSnapshot.getChildren()
-                        .forEach(snap -> {
-                            if (snap.getKey().equals("name")) {
-                                    callable.completion(snap.getValue(), null);
-                            }
-                        });
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-    }
-
-    public void saveBook(Handbook book) {
-        DatabaseReference reference= ref.push();
-        book.setUid(ref.getKey());
-        reference.child("name").setValueAsync(book.getName());
-        DatabaseReference authorsRef = reference.child("authors");
-        book.getAuthors()
-                .forEach(author -> {
-                    DatabaseReference currentAuthorRef =  authorsRef.push();
-                    author.setUid(currentAuthorRef.getKey());
-                    currentAuthorRef.setValueAsync(author);
-                });
-        DatabaseReference chaptersRef = reference.child("chapters");
-        book.getChapters()
-                .forEach(chapter -> {
-                    DatabaseReference currentChapterRef = chaptersRef.push();
-                    chapter.setUid(currentChapterRef.getKey());
-                    currentChapterRef.push().setValueAsync(chapter);
-                });
-    }
-
-
-    public void getBookByUid(String uid, Callable callback) {
-        Handbook handbook = new Handbook();
-        handbook.setUid(uid);
-
-        DatabaseReference bookRef = ref.child(uid);
-        bookRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                dataSnapshot.getChildren()
-                        .forEach(snap -> {
-                            switch (snap.getKey()) {
-                                case "authors":
-                                    ArrayList<Author> authors = getAuthorsFrom(snap);
-                                    handbook.setAuthors(authors);
-                                    break;
-                                case "chapters":
-                                    ArrayList<Chapter> chapters = getChaptersFrom(snap);
-                                    handbook.setChapters(chapters);
-                                    break;
-                                case "name":
-                                    String name = (String) snap.getValue();
-                                    handbook.setName(name);
-                                    break;
-                            }
-                        });
-                callback.completion(handbook, null);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                callback.error(databaseError.getMessage());
-            }
-        });
-    }
-
 
     public void getBookList(Callable callback) {
         logger.info("Called getBookList(" + callback.toString() + ")");
@@ -265,6 +111,18 @@ public class Storage {
                 .setValueAsync(chapter);
     }
 
+    public void removeBook(String bookUid) {
+        ref.child(bookUid)
+                .removeValueAsync();
+    }
+
+
+    public void removeChapter(String bookUid, String chapterUid) {
+        ref.child(bookUid)
+                .child("chapters")
+                .child(chapterUid)
+                .removeValueAsync();
+    }
 
     private class UpdateBookListListener implements ChildEventListener {
 
@@ -399,7 +257,8 @@ public class Storage {
 
         @Override
         public void onChildRemoved(DataSnapshot dataSnapshot) {
-
+            String value = (String) dataSnapshot.getValue();
+            callback.remove(value, dataSnapshot.getKey());
         }
 
         @Override
@@ -409,7 +268,7 @@ public class Storage {
 
         @Override
         public void onCancelled(DatabaseError databaseError) {
-
+            callback.error(databaseError.getMessage());
         }
 
     }

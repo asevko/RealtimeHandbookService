@@ -6,7 +6,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Window {
-    private static SomeArea area;
     private static InformationView bookList;
 
     private Window() {
@@ -15,9 +14,6 @@ public class Window {
         frame.setLocationRelativeTo(null);
 
         frame.setSize(1000, 800);
-
-//        area  = new SomeArea();
-//        frame.add(area, BorderLayout.CENTER);
 
         BookVewModel bookVewModel = new BookVewModel();
         bookList = new InformationView(bookVewModel);
@@ -35,7 +31,7 @@ public class Window {
         try {
             Thread.sleep(5000);
             //area.subscribe();
-            bookList.requestBookList();
+            //bookList.requestBookList();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

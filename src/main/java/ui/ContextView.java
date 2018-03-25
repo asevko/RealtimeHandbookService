@@ -1,13 +1,11 @@
 package ui;
 
 import model.Chapter;
-import storage.Callable;
+import model.Callable;
 import viewModel.BookVewModel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ContextView implements Callable{
 
@@ -27,6 +25,7 @@ public class ContextView implements Callable{
                                                                 new Insets(5,5,5,5),
                                                                 0,
                                                                 50);
+    private boolean changedMyself = false;
 
     ContextView(BookVewModel bookVewModel) {
         this.bookVewModel = bookVewModel;
@@ -108,25 +107,32 @@ public class ContextView implements Callable{
     @Override
     public void change(Object obj, String event) {
         String value = (String)obj;
-        int answer = JOptionPane.showConfirmDialog(panel.getParent(), "Chapter " + event + " was changed\nReload changes?",
-                "Information", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
-        boolean shouldUpdate = answer == 0;
+//        int answer = JOptionPane.showConfirmDialog(panel.getParent(), "Chapter " + event + " was changed\nReload changes?",
+//                "Information", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
+//        boolean shouldUpdate = answer == 0;
         switch (event) {
             case "text":
-                if (shouldUpdate) {
-                    chapterText.setText(value);
-                }
+//                if (shouldUpdate) {
+//                }
+                chapterText.setText(value);
                 break;
             case "description":
-                if (shouldUpdate) {
+//                if (shouldUpdate) {
+//                }
                 chapterDescription.setText(value);
-                }
                 break;
         }
     }
 
     @Override
     public void remove(Object obj, String event) {
-
+        switch (event) {
+            case "text":
+                chapterText.setText("");
+                break;
+            case "description":
+                chapterDescription.setText("");
+                break;
+        }
     }
 }
