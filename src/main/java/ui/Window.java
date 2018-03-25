@@ -16,12 +16,15 @@ public class Window {
 
         frame.setSize(1000, 800);
 
-        area  = new SomeArea();
-        frame.add(area, BorderLayout.CENTER);
+//        area  = new SomeArea();
+//        frame.add(area, BorderLayout.CENTER);
 
         BookVewModel bookVewModel = new BookVewModel();
         bookList = new InformationView(bookVewModel);
         frame.add(bookList.getPanel(), BorderLayout.WEST);
+
+        ContextView contextView = new ContextView(bookVewModel);
+        frame.add(contextView.getPanel(), BorderLayout.CENTER);
 
         frame.setFocusable(true);
         frame.setVisible(true);
@@ -31,7 +34,7 @@ public class Window {
         SwingUtilities.invokeLater(Window::new);
         try {
             Thread.sleep(5000);
-            area.subscribe();
+            //area.subscribe();
             bookList.requestBookList();
         } catch (InterruptedException e) {
             e.printStackTrace();

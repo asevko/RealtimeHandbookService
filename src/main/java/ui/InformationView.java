@@ -1,6 +1,6 @@
 package ui;
 
-import extensions.CustomPair;
+import model.CustomPair;
 import org.apache.log4j.Logger;
 import storage.Callable;
 import viewModel.BookVewModel;
@@ -115,7 +115,14 @@ public class InformationView implements Callable {
         chapterLists.addMouseListener(new MouseInputAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                //super.mouseClicked(e);
+                if (e.getClickCount() == 2) {
+                    super.mouseClicked(e);
+                    DefaultMutableTreeNode clickedNode = (DefaultMutableTreeNode) chapterLists.getLastSelectedPathComponent();
+                    CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
+                    String chapterUid = entry.getKey();
+                    bookVewModel.requestChapter(chapterUid);
+                    bookVewModel.setActiveChapterUid(chapterUid);
+                }
                 if (SwingUtilities.isRightMouseButton(e)) {
                     int row = chapterLists.getClosestRowForLocation(e.getX(), e.getY());
                     chapterLists.setSelectionRow(row);

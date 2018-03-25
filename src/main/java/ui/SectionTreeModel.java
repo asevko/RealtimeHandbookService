@@ -2,7 +2,7 @@ package ui;
 
 
 
-import extensions.CustomPair;
+import model.CustomPair;
 
 import javax.swing.event.TreeModelListener;
 import javax.swing.tree.DefaultMutableTreeNode;

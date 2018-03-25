@@ -1,12 +1,10 @@
 package viewModel;
 
-import extensions.CustomPair;
+import model.CustomPair;
 import model.Chapter;
-import rx.Observable;
 import storage.Callable;
 import storage.Storage;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class BookVewModel {
@@ -16,6 +14,7 @@ public class BookVewModel {
     private HashMap<String, String> chaptersHash;
     private String activeBookUid;
     private String activeChapterUid;
+    private Callable chapterCallback;
 
     public BookVewModel() {
         storage = Storage.shared();
@@ -85,6 +84,19 @@ public class BookVewModel {
 
     public String getChapterNameByKey(String key) {
         return chaptersHash.get(key);
+    }
+
+    public void requestChapter(String chapterUid) {
+        storage.getChapter(activeBookUid, chapterUid, chapterCallback);
+    }
+
+    public void registerChapterCallback(Callable chapterCallback) {
+        this.chapterCallback = chapterCallback;
+    }
+
+    public void updateChapter(String description, String text) {
+        String chapterName = chaptersHash.get(activeChapterUid);
+        storage.updateChapter(activeBookUid, activeChapterUid, new Chapter(chapterName, description, text));
     }
 
 }

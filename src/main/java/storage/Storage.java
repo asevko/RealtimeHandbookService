@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.google.firebase.database.*;
-import extensions.CustomPair;
+import model.CustomPair;
 import model.Author;
 import model.Chapter;
 import model.Handbook;
@@ -50,6 +50,7 @@ public class Storage {
     private FirebaseOptions options;
 
     private UpdateChapterListListener updateChapterListListener;
+    private UpdateChapterListener updateChapterListener;
 
     private Storage() {
         try {
@@ -77,6 +78,7 @@ public class Storage {
 
     private void createEventListeners() {
         updateChapterListListener = new UpdateChapterListListener(null);
+        updateChapterListener = new UpdateChapterListener(null);
     }
 
     private ArrayList<Author> getAuthorsFrom(DataSnapshot dataSnapshot) {
@@ -247,6 +249,22 @@ public class Storage {
                 .setValueAsync(newName);
     }
 
+    public void getChapter(String bookUid, String chapterUid, Callable callback) {
+        DatabaseReference chaptersRef =  ref.child(bookUid)
+                .child("chapters")
+                .child(chapterUid);
+        chaptersRef.removeEventListener(updateChapterListener);
+        updateChapterListener = new UpdateChapterListener(callback);
+        chaptersRef.addChildEventListener(updateChapterListener);
+    }
+
+    public void updateChapter(String bookUid, String chapterUid, Chapter chapter) {
+        ref.child(bookUid)
+                .child("chapters")
+                .child(chapterUid)
+                .setValueAsync(chapter);
+    }
+
 
     private class UpdateBookListListener implements ChildEventListener {
 
@@ -339,6 +357,61 @@ public class Storage {
         public void onCancelled(DatabaseError databaseError) {
             callback.error(databaseError.getMessage());
         }
+    }
+
+    private class UpdateChapterListener implements ChildEventListener {
+
+        private final Callable callback;
+        private String description;
+        private String name;
+        private String text;
+
+        UpdateChapterListener(Callable callback) {
+            this.callback  = callback;
+        }
+
+        @Override
+        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+            switch (dataSnapshot.getKey()) {
+                case "description":
+                    description = (String) dataSnapshot.getValue();
+                    break;
+                case "text":
+                    text = (String) dataSnapshot.getValue();
+                    break;
+                case "name":
+                    name = (String) dataSnapshot.getValue();
+                    break;
+            }
+            boolean canSend = name != null &&
+                    description != null &&
+                    text != null;
+            if (canSend) {
+                callback.completion(new Chapter(name, description, text), null);
+            }
+        }
+
+        @Override
+        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+            String value = (String) dataSnapshot.getValue();
+            callback.change(value, dataSnapshot.getKey());
+        }
+
+        @Override
+        public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+        }
+
+        @Override
+        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+
+        }
+
     }
 
 }
