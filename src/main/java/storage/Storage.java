@@ -227,28 +227,24 @@ public class Storage {
         currentBookChaptersRef.removeEventListener(updateChapterListListener);
         updateChapterListListener = new UpdateChapterListListener(callback);
         currentBookChaptersRef.addChildEventListener(updateChapterListListener);
-//        ref.child(bookUid)
-//                .child("chapters")
-//                .addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(DataSnapshot dataSnapshot) {
-//                        dataSnapshot.getChildren()
-//                                .forEach(snap -> {
-//                                    logger.info("From getBookChapters(" + bookUid + ", " + callback.toString() +
-//                                            ")\n\t\t\t\t\t\t\t" + dataSnapshot);
-//                                    Chapter chapter = snap.getValue(Chapter.class);
-//                                    String key = snap.getKey();
-//                                    String name = chapter.getName();
-//                                    CustomPair<String, String> entry = new CustomPair<>(key, name);
-//                                    callback.completion(entry, "chapters");
-//                                });
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(DatabaseError databaseError) {
-//                        callback.error(databaseError.getMessage());
-//                    }
-//                });
+    }
+
+    public void renameBook(CustomPair<String, String> newValue) {
+        String key = newValue.getKey();
+        String newName = newValue.getValue();
+        ref.child(key)
+                .child("name")
+                .setValueAsync(newName);
+    }
+
+    public void renameBookChapter(String bookUid, CustomPair<String, String> newValue) {
+        String key = newValue.getKey();
+        String newName = newValue.getValue();
+        ref.child(bookUid)
+                .child("chapters")
+                .child(key)
+                .child("name")
+                .setValueAsync(newName);
     }
 
 
@@ -318,12 +314,20 @@ public class Storage {
 
         @Override
         public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
+            String name = (String) dataSnapshot.child("name").getValue();
+            String key = dataSnapshot.getKey();
+            logger.info("Changed chapter name: " + name + ", key: " + key);
+            CustomPair<String, String> entry = new CustomPair<>(key, name);
+            callback.change(entry, "chapters");
         }
 
         @Override
         public void onChildRemoved(DataSnapshot dataSnapshot) {
-
+            String name = (String) dataSnapshot.child("name").getValue();
+            String key = dataSnapshot.getKey();
+            logger.info("Removed chapter name: " + name + ", key: " + key);
+            CustomPair<String, String> entry = new CustomPair<>(key, name);
+            callback.remove(entry, "chapters");
         }
 
         @Override

@@ -13,6 +13,9 @@ import java.awt.event.MouseEvent;
 
 public class InformationView implements Callable {
 
+    private static String bookImageURL = "https://sun1-2.userapi.com/c824203/v824203830/f69da/7LVCg1aOTAs.jpg";
+    private static String chapterImageURL = "https://pp.userapi.com/c846019/v846019830/9c12/5B4VL4ozUJc.jpg";
+
     private final static Logger logger = Logger.getLogger(InformationView.class);
 
     private static int width = 150;
@@ -58,7 +61,9 @@ public class InformationView implements Callable {
         bookTreeModel = new SectionTreeModel();
         constraints.weighty= 0.97;
 
-        JTree bookList = new JTree(bookTreeModel);
+        final JTree bookList = new JTree(bookTreeModel);
+        bookList.setOpaque(true);
+        bookList.setCellRenderer(new CustomCellRender(bookImageURL));
         bookList.addMouseListener(new MouseInputAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -70,6 +75,29 @@ public class InformationView implements Callable {
                     chapterTreeModel.removeAllChild();
                     requestBookChapters(bookUid);
                     bookVewModel.setActiveBookUid(bookUid);
+                }
+                if (SwingUtilities.isRightMouseButton(e)) {
+                    int row = bookList.getClosestRowForLocation(e.getX(), e.getY());
+                    bookList.setSelectionRow(row);
+                    DefaultMutableTreeNode clickedNode = (DefaultMutableTreeNode) bookList.getLastSelectedPathComponent();
+                    CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
+                    String key = entry.getKey();
+                    String oldName = entry.getValue();
+                    JPopupMenu popupMenu = new JPopupMenu();
+                    JMenuItem rename = new JMenuItem("Rename");
+                    rename.addActionListener(event -> {
+                        String newName = JOptionPane.showInputDialog(panel.getParent(),
+                                "Enter new book name", oldName);
+                        if (!newName.equals("")) {
+                            bookVewModel.renameBook(new CustomPair<>(key, newName));
+                        }
+                    });
+                    popupMenu.add(rename);
+                    popupMenu.add(new JPopupMenu.Separator());
+                    JMenuItem delete = new JMenuItem("Delete");
+                    //add deleting book
+                    popupMenu.add(delete);
+                    bookList.setComponentPopupMenu(popupMenu);
                 }
             }
         });
@@ -83,6 +111,37 @@ public class InformationView implements Callable {
 
         chapterTreeModel = new SectionTreeModel();
         JTree chapterLists = new JTree(chapterTreeModel);
+        chapterLists.setCellRenderer(new CustomCellRender(chapterImageURL));
+        chapterLists.addMouseListener(new MouseInputAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                //super.mouseClicked(e);
+                if (SwingUtilities.isRightMouseButton(e)) {
+                    int row = chapterLists.getClosestRowForLocation(e.getX(), e.getY());
+                    chapterLists.setSelectionRow(row);
+                    DefaultMutableTreeNode clickedNode = (DefaultMutableTreeNode) chapterLists.getLastSelectedPathComponent();
+                    CustomPair<String, String> entry = (CustomPair<String, String>) clickedNode.getUserObject();
+                    String key = entry.getKey();
+                    String oldName = entry.getValue();
+                    JPopupMenu popupMenu = new JPopupMenu();
+                    JMenuItem rename = new JMenuItem("Rename");
+                    rename.addActionListener(event -> {
+                        String newName = JOptionPane.showInputDialog(panel.getParent(),
+                                "Enter new chapter name", oldName);
+                        if (!newName.equals("")) {
+                            bookVewModel.renameBookChapter(new CustomPair<>(key, newName));
+                        }
+                    });
+                    popupMenu.add(rename);
+                    popupMenu.add(new JPopupMenu.Separator());
+                    JMenuItem delete = new JMenuItem("Delete");
+                    //add deleting book
+                    popupMenu.add(delete);
+                    chapterLists.setComponentPopupMenu(popupMenu);
+                }
+            }
+        });
+        chapterLists.setOpaque(true);
         chapterLists.setRootVisible(false);
         chapterLists.setShowsRootHandles(true);
         constraints.gridx = 1;
@@ -123,7 +182,8 @@ public class InformationView implements Callable {
 
     @Override
     public void error(String error) {
-
+        JOptionPane.showConfirmDialog(panel.getParent(), error, "Error",
+                JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE);
     }
 
     @Override
@@ -131,15 +191,20 @@ public class InformationView implements Callable {
         logger.info("InformationView change(" + obj + ", " + event + ")");
         CustomPair<String, String> newEntry = (CustomPair<String, String>)obj;
         String key = newEntry.getKey();
+        String oldName;
+        CustomPair<String, String> oldEntry;
         switch (event) {
             case "books":
-                String oldName = bookVewModel.getBookNameByKey(key);
+                oldName = bookVewModel.getBookNameByKey(key);
                 bookVewModel.updateBookHash(newEntry);
-                CustomPair<String, String> oldEntry = new CustomPair<>(key, oldName);
+                oldEntry = new CustomPair<>(key, oldName);
                 bookTreeModel.replaceSection(oldEntry, newEntry);
                 break;
             case "chapters":
+                oldName = bookVewModel.getChapterNameByKey(key);
                 bookVewModel.updateChapterHash(newEntry);
+                oldEntry = new CustomPair<>(key, oldName);
+                chapterTreeModel.replaceSection(oldEntry, newEntry);
                 break;
         }
     }

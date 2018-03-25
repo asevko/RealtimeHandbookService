@@ -23,10 +23,17 @@ public class BookVewModel {
         chaptersHash = new HashMap<>();
     }
 
+    public void renameBook(CustomPair<String, String> newValue) {
+        storage.renameBook(newValue);
+    }
+
+    public void renameBookChapter(CustomPair<String, String> newValue) {
+        storage.renameBookChapter(activeBookUid, newValue);
+    }
+
     public void getBookChapters(String bookUid, Callable callable) {
         storage.getBookChapters(bookUid, callable);
     }
-
 
     public void requestBookList(Callable callable) {
         storage.getBookList(callable);
