@@ -107,18 +107,11 @@ public class ContextView implements Callable{
     @Override
     public void change(Object obj, String event) {
         String value = (String)obj;
-//        int answer = JOptionPane.showConfirmDialog(panel.getParent(), "Chapter " + event + " was changed\nReload changes?",
-//                "Information", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
-//        boolean shouldUpdate = answer == 0;
         switch (event) {
             case "text":
-//                if (shouldUpdate) {
-//                }
                 chapterText.setText(value);
                 break;
             case "description":
-//                if (shouldUpdate) {
-//                }
                 chapterDescription.setText(value);
                 break;
         }

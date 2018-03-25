@@ -31,6 +31,8 @@ public class BookVewModel {
     }
 
     public void getBookChapters(String bookUid, Callable callable) {
+        chapterCallback.remove(null, "description");
+        chapterCallback.remove(null, "text");
         storage.getBookChapters(bookUid, callable);
     }
 

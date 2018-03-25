@@ -80,7 +80,8 @@ public class InformationView implements Callable {
 
 
         JButton addChapterButton = new JButton("+");
-        addChapterButton.addActionListener(event -> {
+        addChapterButton
+                .addActionListener(event -> {
             String chapterName  = (String) JOptionPane.showInputDialog(panel.getParent(),
                     "Enter chapter name", "New chapter", JOptionPane.INFORMATION_MESSAGE,
                     null, null, "Awesome chapter name");

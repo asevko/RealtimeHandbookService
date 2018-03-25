@@ -9150,3 +9150,1433 @@ java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.pat
 2018-03-25 21:22:56 INFO  Storage:73 - Called getBookChapters(-L8EISHNcwp9SMkOCL4S, ui.InformationView@461cd12b)
 2018-03-25 21:22:56 INFO  Storage:201 - Added chapter: Intro
 2018-03-25 21:22:56 INFO  InformationView:222 - InformationView completion(Intro, chapters)
+2018-03-25 21:26:47 INFO  Storage:59 - Application initialized successfully
+2018-03-25 21:26:48 DEBUG InternalLoggerFactory:47 - Using Log4J as the default logging framework
+2018-03-25 21:26:48 DEBUG InternalThreadLocalMap:51 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-03-25 21:26:48 DEBUG InternalThreadLocalMap:54 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-03-25 21:26:48 DEBUG PlatformDependent:954 - Platform: MacOS
+2018-03-25 21:26:48 DEBUG PlatformDependent0:369 - -Dio.netty.noUnsafe: false
+2018-03-25 21:26:48 DEBUG PlatformDependent0:809 - Java version: 9
+2018-03-25 21:26:48 DEBUG PlatformDependent0:113 - sun.misc.Unsafe.theUnsafe: available
+2018-03-25 21:26:48 DEBUG PlatformDependent0:137 - sun.misc.Unsafe.copyMemory: available
+2018-03-25 21:26:48 DEBUG PlatformDependent0:175 - java.nio.Buffer.address: available
+2018-03-25 21:26:48 DEBUG PlatformDependent0:236 - direct buffer constructor: available
+2018-03-25 21:26:48 DEBUG PlatformDependent0:287 - java.nio.Bits.unaligned: available, true
+2018-03-25 21:26:48 DEBUG PlatformDependent0:346 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @157d176
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:589)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:556)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:308)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:299)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:208)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:79)
+	at io.netty.util.AsciiString.hashCode(AsciiString.java:1415)
+	at io.netty.util.AsciiString$1.hashCode(AsciiString.java:1360)
+	at io.netty.util.AsciiString$1.hashCode(AsciiString.java:1357)
+	at io.netty.handler.codec.DefaultHeaders.add(DefaultHeaders.java:297)
+	at io.netty.handler.codec.DefaultHeaders.addObject(DefaultHeaders.java:327)
+	at io.netty.handler.codec.http.DefaultHttpHeaders.add(DefaultHttpHeaders.java:117)
+	at com.google.firebase.database.connection.NettyWebSocketClient$WebSocketClientHandler.<init>(NettyWebSocketClient.java:153)
+	at com.google.firebase.database.connection.NettyWebSocketClient.<init>(NettyWebSocketClient.java:68)
+	at com.google.firebase.database.connection.WebsocketConnection$DefaultWSClientFactory.newClient(WebsocketConnection.java:435)
+	at com.google.firebase.database.connection.WebsocketConnection.<init>(WebsocketConnection.java:80)
+	at com.google.firebase.database.connection.WebsocketConnection.<init>(WebsocketConnection.java:68)
+	at com.google.firebase.database.connection.Connection$DefaultWebsocketConnectionFactory.newConnection(Connection.java:297)
+	at com.google.firebase.database.connection.Connection.<init>(Connection.java:72)
+	at com.google.firebase.database.connection.Connection.<init>(Connection.java:57)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$DefaultConnectionFactory.newConnection(PersistentConnectionImpl.java:1303)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:547)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-03-25 21:26:48 DEBUG PlatformDependent0:359 - java.nio.DirectByteBuffer.<init>(long, int): available
+2018-03-25 21:26:48 DEBUG PlatformDependent:980 - sun.misc.Unsafe: available
+2018-03-25 21:26:48 DEBUG PlatformDependent:1044 - maxDirectMemory: 2147483648 bytes (maybe)
+2018-03-25 21:26:48 DEBUG PlatformDependent:1063 - -Dio.netty.tmpdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T (java.io.tmpdir)
+2018-03-25 21:26:48 DEBUG PlatformDependent:1142 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-03-25 21:26:48 DEBUG PlatformDependent:132 - -Dio.netty.noPreferDirect: false
+2018-03-25 21:26:48 DEBUG PlatformDependent:1044 - maxDirectMemory: 2147483648 bytes (maybe)
+2018-03-25 21:26:48 DEBUG PlatformDependent:172 - -Dio.netty.maxDirectMemory: 2147483648 bytes
+2018-03-25 21:26:48 DEBUG PlatformDependent:178 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-03-25 21:26:48 DEBUG CleanerJava9:63 - java.nio.ByteBuffer.cleaner(): available
+2018-03-25 21:26:48 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 8
+2018-03-25 21:26:48 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+2018-03-25 21:26:48 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2018-03-25 21:26:48 DEBUG PlatformDependent:848 - org.jctools-core.MpscChunkedArrayQueue: available
+2018-03-25 21:26:48 DEBUG NativeLibraryLoader:67 - -Dio.netty.native.workdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T (io.netty.tmpdir)
+2018-03-25 21:26:48 DEBUG NativeLibraryLoader:238 - Unable to load the library 'netty_tcnative_osx_x86_64', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+	at java.base/java.lang.System.loadLibrary(System.java:1857)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:263)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:255)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:233)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:124)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:85)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:421)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:89)
+	at io.netty.handler.ssl.SslContext.defaultProvider(SslContext.java:118)
+	at io.netty.handler.ssl.SslContext.defaultClientProvider(SslContext.java:114)
+	at io.netty.handler.ssl.SslContext.newClientContextInternal(SslContext.java:763)
+	at io.netty.handler.ssl.SslContextBuilder.build(SslContextBuilder.java:446)
+	at com.google.firebase.database.connection.NettyWebSocketClient.connect(NettyWebSocketClient.java:82)
+	at com.google.firebase.database.connection.WebsocketConnection.open(WebsocketConnection.java:84)
+	at com.google.firebase.database.connection.Connection.open(Connection.java:79)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:548)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-03-25 21:26:48 DEBUG NativeLibraryLoader:128 - netty_tcnative_osx_x86_64 cannot be loaded from java.libary.path, now trying export to -Dio.netty.native.workdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T
+java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+	at java.base/java.lang.System.loadLibrary(System.java:1857)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:243)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:124)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:85)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:421)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:89)
+	at io.netty.handler.ssl.SslContext.defaultProvider(SslContext.java:118)
+	at io.netty.handler.ssl.SslContext.defaultClientProvider(SslContext.java:114)
+	at io.netty.handler.ssl.SslContext.newClientContextInternal(SslContext.java:763)
+	at io.netty.handler.ssl.SslContextBuilder.build(SslContextBuilder.java:446)
+	at com.google.firebase.database.connection.NettyWebSocketClient.connect(NettyWebSocketClient.java:82)
+	at com.google.firebase.database.connection.WebsocketConnection.open(WebsocketConnection.java:84)
+	at com.google.firebase.database.connection.Connection.open(Connection.java:79)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:548)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+		at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+		at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+		at java.base/java.lang.System.loadLibrary(System.java:1857)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:263)
+		at java.base/java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:255)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:233)
+		... 25 more
+2018-03-25 21:26:48 DEBUG NativeLibraryLoader:234 - Successfully loaded the library /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T/libnetty_tcnative_osx_x86_648031433874029605554.dylib
+2018-03-25 21:26:48 DEBUG OpenSsl:120 - netty-tcnative using native library: BoringSSL
+2018-03-25 21:26:48 DEBUG ResourceLeakDetector:121 - -Dio.netty.leakDetection.level: simple
+2018-03-25 21:26:48 DEBUG ResourceLeakDetector:122 - -Dio.netty.leakDetection.targetRecords: 4
+2018-03-25 21:26:48 DEBUG AbstractByteBuf:52 - -Dio.netty.buffer.bytebuf.checkAccessible: true
+2018-03-25 21:26:48 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@37c40531
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.numHeapArenas: 8
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.numDirectArenas: 8
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.pageSize: 8192
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:128 - -Dio.netty.allocator.maxOrder: 11
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:132 - -Dio.netty.allocator.chunkSize: 16777216
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:133 - -Dio.netty.allocator.tinyCacheSize: 512
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:134 - -Dio.netty.allocator.smallCacheSize: 256
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:135 - -Dio.netty.allocator.normalCacheSize: 64
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:136 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:137 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-03-25 21:26:48 DEBUG PooledByteBufAllocator:138 - -Dio.netty.allocator.useCacheForAllThreads: true
+2018-03-25 21:26:48 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+2018-03-25 21:26:48 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+2018-03-25 21:26:48 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2018-03-25 21:26:48 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@79714a49
+2018-03-25 21:26:48 DEBUG Recycler:96 - -Dio.netty.recycler.maxCapacityPerThread: 32768
+2018-03-25 21:26:48 DEBUG Recycler:97 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2018-03-25 21:26:48 DEBUG Recycler:98 - -Dio.netty.recycler.linkCapacity: 16
+2018-03-25 21:26:48 DEBUG Recycler:99 - -Dio.netty.recycler.ratio: 8
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 => ECDHE-ECDSA-AES128-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 => ECDHE-ECDSA-AES128-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 => ECDHE-RSA-AES128-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA256 => ECDHE-RSA-AES128-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 => ECDHE-ECDSA-AES256-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 => ECDHE-ECDSA-AES256-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 => ECDHE-RSA-AES256-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA384 => ECDHE-RSA-AES256-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA256 => AES128-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA256 => AES128-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA256 => AES256-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA256 => AES256-SHA256
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+2018-03-25 21:26:48 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+2018-03-25 21:26:48 DEBUG OpenSsl:231 - Supported protocols (OpenSSL): [[SSLv2Hello, TLSv1, TLSv1.1, TLSv1.2]] 
+2018-03-25 21:26:48 DEBUG OpenSsl:232 - Default cipher suites (OpenSSL): [TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_PSK_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_PSK_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2018-03-25 21:26:48 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 1396 (auto-detected)
+2018-03-25 21:26:48 DEBUG NetUtil:137 - -Djava.net.preferIPv4Stack: false
+2018-03-25 21:26:48 DEBUG NetUtil:138 - -Djava.net.preferIPv6Addresses: false
+2018-03-25 21:26:48 DEBUG NetUtil:222 - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+2018-03-25 21:26:48 DEBUG NetUtil:287 - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+2018-03-25 21:26:48 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: 8c:85:90:ff:fe:27:16:93 (auto-detected)
+2018-03-25 21:26:48 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@ad2c5d4
+2018-03-25 21:26:49 DEBUG WebSocketClientHandshaker13:140 - WebSocket version 13 client handshake key: 1Xyn7lWsugExoYAWUWK4xQ==, expected response: ir6x1WF+WLMj/qihsnn9bQpRGlk=
+2018-03-25 21:26:49 DEBUG SslHandler:1478 - [id: 0xb7c7ea05, L:/192.168.0.104:50232 - R:realtimehandbookservce.firebaseio.com/35.201.97.85:443] HANDSHAKEN: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=132
+2018-03-25 21:26:49 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=66
+2018-03-25 21:26:49 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=191
+2018-03-25 21:26:49 INFO  Storage:68 - Called getBookList(ui.InformationView@76867f30)
+2018-03-25 21:26:49 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=54
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=75
+2018-03-25 21:26:49 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=54
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=1
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=2548
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:49 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:26:49 INFO  Storage:155 - Added book: C++Handbook
+2018-03-25 21:26:49 INFO  InformationView:223 - InformationView completion(C++Handbook, books)
+2018-03-25 21:26:50 INFO  Storage:155 - Added book: JavaHandbook
+2018-03-25 21:26:50 INFO  InformationView:223 - InformationView completion(JavaHandbook, books)
+2018-03-25 21:26:50 INFO  Storage:155 - Added book: VladosSecretHandBook
+2018-03-25 21:26:50 INFO  InformationView:223 - InformationView completion(VladosSecretHandBook, books)
+2018-03-25 21:26:50 INFO  Storage:155 - Added book: GeneratedBook
+2018-03-25 21:26:50 INFO  InformationView:223 - InformationView completion(GeneratedBook, books)
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=1
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=2548
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:26:50 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:27:13 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:27:13 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=95
+2018-03-25 21:27:13 INFO  Storage:163 - Changed book name: GeneratedBook For You, key: -L8SwB6ZmNzPj2KOEH2Q
+2018-03-25 21:27:13 INFO  InformationView:246 - InformationView change(GeneratedBook For You, books)
+2018-03-25 21:27:34 INFO  Storage:73 - Called getBookChapters(-L8SwB6ZmNzPj2KOEH2Q, ui.InformationView@76867f30)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 1
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 1, chapters)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 2
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 2, chapters)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 3
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 3, chapters)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 4
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 4, chapters)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 5
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 5, chapters)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 6
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 6, chapters)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 7
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 7, chapters)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 8
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 8, chapters)
+2018-03-25 21:27:34 INFO  Storage:201 - Added chapter: Chapter 9
+2018-03-25 21:27:34 INFO  InformationView:223 - InformationView completion(Chapter 9, chapters)
+2018-03-25 21:27:46 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:27:46 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=114
+2018-03-25 21:27:46 INFO  Storage:210 - Changed chapter name: Chapter -1, key: -L8SwB70u4z6vyjl4kTi
+2018-03-25 21:27:46 INFO  InformationView:246 - InformationView change(Chapter -1, chapters)
+2018-03-25 21:27:46 INFO  Storage:163 - Changed book name: GeneratedBook For You, key: -L8SwB6ZmNzPj2KOEH2Q
+2018-03-25 21:27:46 INFO  InformationView:246 - InformationView change(GeneratedBook For You, books)
+2018-03-25 21:28:03 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:28:03 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=1205
+2018-03-25 21:28:03 INFO  Storage:210 - Changed chapter name: Chapter -1, key: -L8SwB70u4z6vyjl4kTi
+2018-03-25 21:28:03 INFO  InformationView:246 - InformationView change(Chapter -1, chapters)
+2018-03-25 21:28:03 INFO  Storage:163 - Changed book name: GeneratedBook For You, key: -L8SwB6ZmNzPj2KOEH2Q
+2018-03-25 21:28:03 INFO  InformationView:246 - InformationView change(GeneratedBook For You, books)
+2018-03-25 21:28:20 INFO  Storage:155 - Added book: Swift
+2018-03-25 21:28:20 INFO  InformationView:223 - InformationView completion(Swift, books)
+2018-03-25 21:28:20 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=85
+2018-03-25 21:28:20 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:28:20 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=79
+2018-03-25 21:28:20 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:28:20 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:28:25 INFO  Storage:73 - Called getBookChapters(-L8TPldyzTX9wHnxyqiI, ui.InformationView@76867f30)
+2018-03-25 21:28:30 INFO  Storage:201 - Added chapter: Intro
+2018-03-25 21:28:30 INFO  InformationView:223 - InformationView completion(Intro, chapters)
+2018-03-25 21:28:30 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=115
+2018-03-25 21:28:30 INFO  Storage:163 - Changed book name: Swift, key: -L8TPldyzTX9wHnxyqiI
+2018-03-25 21:28:30 INFO  InformationView:246 - InformationView change(Swift, books)
+2018-03-25 21:28:30 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:28:30 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=109
+2018-03-25 21:28:30 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:28:30 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:28:54 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=170
+2018-03-25 21:28:54 INFO  Storage:210 - Changed chapter name: Intro, key: -L8TPo5oABELLkUGadCx
+2018-03-25 21:28:54 INFO  InformationView:246 - InformationView change(Intro, chapters)
+2018-03-25 21:28:54 INFO  Storage:163 - Changed book name: Swift, key: -L8TPldyzTX9wHnxyqiI
+2018-03-25 21:28:54 INFO  InformationView:246 - InformationView change(Swift, books)
+2018-03-25 21:28:54 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:28:54 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=164
+2018-03-25 21:28:54 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:28:54 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:29:39 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:30:24 INFO  Storage:73 - Called getBookChapters(-L8ENetYYOSk5YKOzfd8, ui.InformationView@76867f30)
+2018-03-25 21:30:24 INFO  Storage:201 - Added chapter: Chapter 1 of Java
+2018-03-25 21:30:24 INFO  InformationView:223 - InformationView completion(Chapter 1 of Java, chapters)
+2018-03-25 21:30:24 INFO  Storage:201 - Added chapter: Chapter 2 of Java
+2018-03-25 21:30:24 INFO  InformationView:223 - InformationView completion(Chapter 2 of Java, chapters)
+2018-03-25 21:30:24 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:30:27 INFO  Storage:73 - Called getBookChapters(-L8SwB6ZmNzPj2KOEH2Q, ui.InformationView@76867f30)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter -1
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter -1, chapters)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter 1
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter 1, chapters)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter 2
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter 2, chapters)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter 3
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter 3, chapters)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter 4
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter 4, chapters)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter 5
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter 5, chapters)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter 6
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter 6, chapters)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter 7
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter 7, chapters)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter 8
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter 8, chapters)
+2018-03-25 21:30:27 INFO  Storage:201 - Added chapter: Chapter 9
+2018-03-25 21:30:27 INFO  InformationView:223 - InformationView completion(Chapter 9, chapters)
+2018-03-25 21:31:09 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:31:15 INFO  Storage:73 - Called getBookChapters(-L8TPldyzTX9wHnxyqiI, ui.InformationView@76867f30)
+2018-03-25 21:31:15 INFO  Storage:201 - Added chapter: Intro
+2018-03-25 21:31:15 INFO  InformationView:223 - InformationView completion(Intro, chapters)
+2018-03-25 21:31:21 INFO  Storage:219 - Removed chapter name: Intro, key: -L8TPo5oABELLkUGadCx
+2018-03-25 21:31:21 INFO  InformationView:269 - InformationView remove(Intro, chapters)
+2018-03-25 21:31:21 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=77
+2018-03-25 21:31:21 INFO  Storage:219 - Removed chapter name: Intro, key: -L8TPo5oABELLkUGadCx
+2018-03-25 21:31:21 INFO  InformationView:269 - InformationView remove(Intro, chapters)
+2018-03-25 21:31:21 INFO  Storage:172 - Removed book name: Swift, key: -L8TPldyzTX9wHnxyqiI
+2018-03-25 21:31:21 INFO  InformationView:269 - InformationView remove(Swift, books)
+2018-03-25 21:31:21 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:31:21 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=71
+2018-03-25 21:31:21 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:31:21 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:31:22 INFO  Storage:73 - Called getBookChapters(-L8OWx5IxskFfiMGUbhl, ui.InformationView@76867f30)
+2018-03-25 21:31:22 INFO  Storage:201 - Added chapter: SecretChapter
+2018-03-25 21:31:22 INFO  InformationView:223 - InformationView completion(SecretChapter, chapters)
+2018-03-25 21:31:22 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-25 21:31:22 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-25 21:31:23 INFO  Storage:73 - Called getBookChapters(-L8ENetYYOSk5YKOzfd8, ui.InformationView@76867f30)
+2018-03-25 21:31:23 INFO  Storage:201 - Added chapter: Chapter 1 of Java
+2018-03-25 21:31:23 INFO  InformationView:223 - InformationView completion(Chapter 1 of Java, chapters)
+2018-03-25 21:31:23 INFO  Storage:201 - Added chapter: Chapter 2 of Java
+2018-03-25 21:31:23 INFO  InformationView:223 - InformationView completion(Chapter 2 of Java, chapters)
+2018-03-25 21:31:23 INFO  Storage:73 - Called getBookChapters(-L8EISHNcwp9SMkOCL4S, ui.InformationView@76867f30)
+2018-03-25 21:31:23 INFO  Storage:201 - Added chapter: Intro
+2018-03-25 21:31:23 INFO  InformationView:223 - InformationView completion(Intro, chapters)
+2018-03-25 21:32:06 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:32:51 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:33:36 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:34:21 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:35:06 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:35:51 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:37:58 INFO  Storage:59 - Application initialized successfully
+2018-03-25 21:37:59 DEBUG InternalLoggerFactory:47 - Using Log4J as the default logging framework
+2018-03-25 21:37:59 DEBUG InternalThreadLocalMap:51 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-03-25 21:37:59 DEBUG InternalThreadLocalMap:54 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-03-25 21:37:59 DEBUG PlatformDependent:954 - Platform: MacOS
+2018-03-25 21:37:59 DEBUG PlatformDependent0:369 - -Dio.netty.noUnsafe: false
+2018-03-25 21:37:59 DEBUG PlatformDependent0:809 - Java version: 9
+2018-03-25 21:37:59 DEBUG PlatformDependent0:113 - sun.misc.Unsafe.theUnsafe: available
+2018-03-25 21:37:59 DEBUG PlatformDependent0:137 - sun.misc.Unsafe.copyMemory: available
+2018-03-25 21:37:59 DEBUG PlatformDependent0:175 - java.nio.Buffer.address: available
+2018-03-25 21:37:59 DEBUG PlatformDependent0:236 - direct buffer constructor: available
+2018-03-25 21:37:59 DEBUG PlatformDependent0:287 - java.nio.Bits.unaligned: available, true
+2018-03-25 21:37:59 DEBUG PlatformDependent0:346 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @71d15f18
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:589)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:556)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:308)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:299)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:208)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:79)
+	at io.netty.util.AsciiString.hashCode(AsciiString.java:1415)
+	at io.netty.util.AsciiString$1.hashCode(AsciiString.java:1360)
+	at io.netty.util.AsciiString$1.hashCode(AsciiString.java:1357)
+	at io.netty.handler.codec.DefaultHeaders.add(DefaultHeaders.java:297)
+	at io.netty.handler.codec.DefaultHeaders.addObject(DefaultHeaders.java:327)
+	at io.netty.handler.codec.http.DefaultHttpHeaders.add(DefaultHttpHeaders.java:117)
+	at com.google.firebase.database.connection.NettyWebSocketClient$WebSocketClientHandler.<init>(NettyWebSocketClient.java:153)
+	at com.google.firebase.database.connection.NettyWebSocketClient.<init>(NettyWebSocketClient.java:68)
+	at com.google.firebase.database.connection.WebsocketConnection$DefaultWSClientFactory.newClient(WebsocketConnection.java:435)
+	at com.google.firebase.database.connection.WebsocketConnection.<init>(WebsocketConnection.java:80)
+	at com.google.firebase.database.connection.WebsocketConnection.<init>(WebsocketConnection.java:68)
+	at com.google.firebase.database.connection.Connection$DefaultWebsocketConnectionFactory.newConnection(Connection.java:297)
+	at com.google.firebase.database.connection.Connection.<init>(Connection.java:72)
+	at com.google.firebase.database.connection.Connection.<init>(Connection.java:57)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$DefaultConnectionFactory.newConnection(PersistentConnectionImpl.java:1303)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:547)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call$$$capture(Executors.java:514)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-03-25 21:37:59 DEBUG PlatformDependent0:359 - java.nio.DirectByteBuffer.<init>(long, int): available
+2018-03-25 21:37:59 DEBUG PlatformDependent:980 - sun.misc.Unsafe: available
+2018-03-25 21:37:59 DEBUG PlatformDependent:1044 - maxDirectMemory: 2147483648 bytes (maybe)
+2018-03-25 21:37:59 DEBUG PlatformDependent:1063 - -Dio.netty.tmpdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T (java.io.tmpdir)
+2018-03-25 21:37:59 DEBUG PlatformDependent:1142 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-03-25 21:37:59 DEBUG PlatformDependent:132 - -Dio.netty.noPreferDirect: false
+2018-03-25 21:37:59 DEBUG PlatformDependent:1044 - maxDirectMemory: 2147483648 bytes (maybe)
+2018-03-25 21:37:59 DEBUG PlatformDependent:172 - -Dio.netty.maxDirectMemory: 2147483648 bytes
+2018-03-25 21:37:59 DEBUG PlatformDependent:178 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-03-25 21:37:59 DEBUG CleanerJava9:63 - java.nio.ByteBuffer.cleaner(): available
+2018-03-25 21:37:59 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 8
+2018-03-25 21:37:59 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+2018-03-25 21:37:59 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2018-03-25 21:37:59 DEBUG PlatformDependent:848 - org.jctools-core.MpscChunkedArrayQueue: available
+2018-03-25 21:37:59 DEBUG NativeLibraryLoader:67 - -Dio.netty.native.workdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T (io.netty.tmpdir)
+2018-03-25 21:37:59 DEBUG NativeLibraryLoader:238 - Unable to load the library 'netty_tcnative_osx_x86_64', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+	at java.base/java.lang.System.loadLibrary(System.java:1857)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:263)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:255)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:233)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:124)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:85)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:421)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:89)
+	at io.netty.handler.ssl.SslContext.defaultProvider(SslContext.java:118)
+	at io.netty.handler.ssl.SslContext.defaultClientProvider(SslContext.java:114)
+	at io.netty.handler.ssl.SslContext.newClientContextInternal(SslContext.java:763)
+	at io.netty.handler.ssl.SslContextBuilder.build(SslContextBuilder.java:446)
+	at com.google.firebase.database.connection.NettyWebSocketClient.connect(NettyWebSocketClient.java:82)
+	at com.google.firebase.database.connection.WebsocketConnection.open(WebsocketConnection.java:84)
+	at com.google.firebase.database.connection.Connection.open(Connection.java:79)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:548)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call$$$capture(Executors.java:514)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-03-25 21:37:59 DEBUG NativeLibraryLoader:128 - netty_tcnative_osx_x86_64 cannot be loaded from java.libary.path, now trying export to -Dio.netty.native.workdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T
+java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+	at java.base/java.lang.System.loadLibrary(System.java:1857)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:243)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:124)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:85)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:421)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:89)
+	at io.netty.handler.ssl.SslContext.defaultProvider(SslContext.java:118)
+	at io.netty.handler.ssl.SslContext.defaultClientProvider(SslContext.java:114)
+	at io.netty.handler.ssl.SslContext.newClientContextInternal(SslContext.java:763)
+	at io.netty.handler.ssl.SslContextBuilder.build(SslContextBuilder.java:446)
+	at com.google.firebase.database.connection.NettyWebSocketClient.connect(NettyWebSocketClient.java:82)
+	at com.google.firebase.database.connection.WebsocketConnection.open(WebsocketConnection.java:84)
+	at com.google.firebase.database.connection.Connection.open(Connection.java:79)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:548)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call$$$capture(Executors.java:514)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+		at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+		at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+		at java.base/java.lang.System.loadLibrary(System.java:1857)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:263)
+		at java.base/java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:255)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:233)
+		... 27 more
+2018-03-25 21:37:59 DEBUG NativeLibraryLoader:234 - Successfully loaded the library /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T/libnetty_tcnative_osx_x86_6410192803514173442504.dylib
+2018-03-25 21:37:59 DEBUG OpenSsl:120 - netty-tcnative using native library: BoringSSL
+2018-03-25 21:38:00 DEBUG ResourceLeakDetector:121 - -Dio.netty.leakDetection.level: simple
+2018-03-25 21:38:00 DEBUG ResourceLeakDetector:122 - -Dio.netty.leakDetection.targetRecords: 4
+2018-03-25 21:38:00 DEBUG AbstractByteBuf:52 - -Dio.netty.buffer.bytebuf.checkAccessible: true
+2018-03-25 21:38:00 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@462f74bb
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.numHeapArenas: 8
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.numDirectArenas: 8
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.pageSize: 8192
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:128 - -Dio.netty.allocator.maxOrder: 11
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:132 - -Dio.netty.allocator.chunkSize: 16777216
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:133 - -Dio.netty.allocator.tinyCacheSize: 512
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:134 - -Dio.netty.allocator.smallCacheSize: 256
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:135 - -Dio.netty.allocator.normalCacheSize: 64
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:136 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:137 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-03-25 21:38:00 DEBUG PooledByteBufAllocator:138 - -Dio.netty.allocator.useCacheForAllThreads: true
+2018-03-25 21:38:00 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+2018-03-25 21:38:00 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+2018-03-25 21:38:00 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2018-03-25 21:38:00 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6ef15a45
+2018-03-25 21:38:00 DEBUG Recycler:96 - -Dio.netty.recycler.maxCapacityPerThread: 32768
+2018-03-25 21:38:00 DEBUG Recycler:97 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2018-03-25 21:38:00 DEBUG Recycler:98 - -Dio.netty.recycler.linkCapacity: 16
+2018-03-25 21:38:00 DEBUG Recycler:99 - -Dio.netty.recycler.ratio: 8
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 => ECDHE-ECDSA-AES128-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 => ECDHE-ECDSA-AES128-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 => ECDHE-RSA-AES128-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA256 => ECDHE-RSA-AES128-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 => ECDHE-ECDSA-AES256-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 => ECDHE-ECDSA-AES256-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 => ECDHE-RSA-AES256-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA384 => ECDHE-RSA-AES256-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA256 => AES128-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA256 => AES128-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA256 => AES256-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA256 => AES256-SHA256
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+2018-03-25 21:38:00 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+2018-03-25 21:38:00 DEBUG OpenSsl:231 - Supported protocols (OpenSSL): [[SSLv2Hello, TLSv1, TLSv1.1, TLSv1.2]] 
+2018-03-25 21:38:00 DEBUG OpenSsl:232 - Default cipher suites (OpenSSL): [TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_PSK_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_PSK_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2018-03-25 21:38:00 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 1438 (auto-detected)
+2018-03-25 21:38:00 DEBUG NetUtil:137 - -Djava.net.preferIPv4Stack: false
+2018-03-25 21:38:00 DEBUG NetUtil:138 - -Djava.net.preferIPv6Addresses: false
+2018-03-25 21:38:00 DEBUG NetUtil:222 - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+2018-03-25 21:38:00 DEBUG NetUtil:287 - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+2018-03-25 21:38:00 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: 8c:85:90:ff:fe:27:16:93 (auto-detected)
+2018-03-25 21:38:00 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3e916c4d
+2018-03-25 21:38:00 DEBUG WebSocketClientHandshaker13:140 - WebSocket version 13 client handshake key: dJxvzH6XaDBZaKf3bO+ELA==, expected response: +gdHtGHvG1zNoRDKxJxkJ3zSSjo=
+2018-03-25 21:38:00 INFO  Storage:68 - Called getBookList(ui.InformationView@5034c2bd)
+2018-03-25 21:38:00 DEBUG SslHandler:1478 - [id: 0x1fa16ead, L:/192.168.0.104:50261 - R:realtimehandbookservce.firebaseio.com/35.201.97.85:443] HANDSHAKEN: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=132
+2018-03-25 21:38:01 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=66
+2018-03-25 21:38:01 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=191
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=75
+2018-03-25 21:38:01 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=54
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=1
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=2559
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:38:01 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:38:01 INFO  Storage:155 - Added book: C++Handbook
+2018-03-25 21:38:01 INFO  InformationView:223 - InformationView completion(C++Handbook, books)
+2018-03-25 21:38:01 INFO  Storage:155 - Added book: JavaHandbook
+2018-03-25 21:38:01 INFO  InformationView:223 - InformationView completion(JavaHandbook, books)
+2018-03-25 21:38:01 INFO  Storage:155 - Added book: VladosSecretHandBook
+2018-03-25 21:38:01 INFO  InformationView:223 - InformationView completion(VladosSecretHandBook, books)
+2018-03-25 21:38:01 INFO  Storage:155 - Added book: GeneratedBook For You
+2018-03-25 21:38:01 INFO  InformationView:223 - InformationView completion(GeneratedBook For You, books)
+2018-03-25 21:38:07 INFO  Storage:73 - Called getBookChapters(-L8SwB6ZmNzPj2KOEH2Q, ui.InformationView@5034c2bd)
+2018-03-25 21:38:07 INFO  Storage:201 - Added chapter: Chapter -1
+2018-03-25 21:38:07 INFO  InformationView:223 - InformationView completion(Chapter -1, chapters)
+2018-03-25 21:38:07 INFO  Storage:201 - Added chapter: Chapter 1
+2018-03-25 21:38:07 INFO  InformationView:223 - InformationView completion(Chapter 1, chapters)
+2018-03-25 21:38:07 INFO  Storage:201 - Added chapter: Chapter 2
+2018-03-25 21:38:07 INFO  InformationView:223 - InformationView completion(Chapter 2, chapters)
+2018-03-25 21:38:07 INFO  Storage:201 - Added chapter: Chapter 3
+2018-03-25 21:38:07 INFO  InformationView:223 - InformationView completion(Chapter 3, chapters)
+2018-03-25 21:38:07 INFO  Storage:201 - Added chapter: Chapter 4
+2018-03-25 21:38:07 INFO  InformationView:223 - InformationView completion(Chapter 4, chapters)
+2018-03-25 21:38:07 INFO  Storage:201 - Added chapter: Chapter 5
+2018-03-25 21:38:07 INFO  InformationView:223 - InformationView completion(Chapter 5, chapters)
+2018-03-25 21:38:08 INFO  Storage:201 - Added chapter: Chapter 6
+2018-03-25 21:38:08 INFO  InformationView:223 - InformationView completion(Chapter 6, chapters)
+2018-03-25 21:38:08 INFO  Storage:201 - Added chapter: Chapter 7
+2018-03-25 21:38:08 INFO  InformationView:223 - InformationView completion(Chapter 7, chapters)
+2018-03-25 21:38:08 INFO  Storage:201 - Added chapter: Chapter 8
+2018-03-25 21:38:08 INFO  InformationView:223 - InformationView completion(Chapter 8, chapters)
+2018-03-25 21:38:08 INFO  Storage:201 - Added chapter: Chapter 9
+2018-03-25 21:38:08 INFO  InformationView:223 - InformationView completion(Chapter 9, chapters)
+2018-03-25 21:38:33 INFO  Storage:73 - Called getBookChapters(-L8OWx5IxskFfiMGUbhl, ui.InformationView@5034c2bd)
+2018-03-25 21:38:33 INFO  Storage:201 - Added chapter: SecretChapter
+2018-03-25 21:38:33 INFO  InformationView:223 - InformationView completion(SecretChapter, chapters)
+2018-03-25 21:38:33 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-25 21:38:33 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-25 21:38:38 INFO  Storage:73 - Called getBookChapters(-L8OWx5IxskFfiMGUbhl, ui.InformationView@5034c2bd)
+2018-03-25 21:38:38 INFO  Storage:201 - Added chapter: SecretChapter
+2018-03-25 21:38:38 INFO  InformationView:223 - InformationView completion(SecretChapter, chapters)
+2018-03-25 21:38:38 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-25 21:38:38 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-25 21:38:39 INFO  Storage:73 - Called getBookChapters(-L8ENetYYOSk5YKOzfd8, ui.InformationView@5034c2bd)
+2018-03-25 21:38:39 INFO  Storage:201 - Added chapter: Chapter 1 of Java
+2018-03-25 21:38:39 INFO  InformationView:223 - InformationView completion(Chapter 1 of Java, chapters)
+2018-03-25 21:38:39 INFO  Storage:201 - Added chapter: Chapter 2 of Java
+2018-03-25 21:38:39 INFO  InformationView:223 - InformationView completion(Chapter 2 of Java, chapters)
+2018-03-25 21:38:40 INFO  Storage:73 - Called getBookChapters(-L8OWx5IxskFfiMGUbhl, ui.InformationView@5034c2bd)
+2018-03-25 21:38:40 INFO  Storage:201 - Added chapter: SecretChapter
+2018-03-25 21:38:40 INFO  InformationView:223 - InformationView completion(SecretChapter, chapters)
+2018-03-25 21:38:40 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-25 21:38:40 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-25 21:38:41 INFO  Storage:73 - Called getBookChapters(-L8OWx5IxskFfiMGUbhl, ui.InformationView@5034c2bd)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: SecretChapter
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(SecretChapter, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-25 21:38:41 INFO  Storage:73 - Called getBookChapters(-L8SwB6ZmNzPj2KOEH2Q, ui.InformationView@5034c2bd)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter -1
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter -1, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 1
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 1, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 2
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 2, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 3
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 3, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 4
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 4, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 5
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 5, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 6
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 6, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 7
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 7, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 8
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 8, chapters)
+2018-03-25 21:38:41 INFO  Storage:201 - Added chapter: Chapter 9
+2018-03-25 21:38:41 INFO  InformationView:223 - InformationView completion(Chapter 9, chapters)
+2018-03-25 21:38:42 INFO  Storage:73 - Called getBookChapters(-L8OWx5IxskFfiMGUbhl, ui.InformationView@5034c2bd)
+2018-03-25 21:38:42 INFO  Storage:201 - Added chapter: SecretChapter
+2018-03-25 21:38:42 INFO  InformationView:223 - InformationView completion(SecretChapter, chapters)
+2018-03-25 21:38:42 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-25 21:38:42 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-25 21:38:43 INFO  Storage:73 - Called getBookChapters(-L8OWx5IxskFfiMGUbhl, ui.InformationView@5034c2bd)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: SecretChapter
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(SecretChapter, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-25 21:38:43 INFO  Storage:73 - Called getBookChapters(-L8SwB6ZmNzPj2KOEH2Q, ui.InformationView@5034c2bd)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter -1
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter -1, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 1
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 1, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 2
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 2, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 3
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 3, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 4
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 4, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 5
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 5, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 6
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 6, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 7
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 7, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 8
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 8, chapters)
+2018-03-25 21:38:43 INFO  Storage:201 - Added chapter: Chapter 9
+2018-03-25 21:38:43 INFO  InformationView:223 - InformationView completion(Chapter 9, chapters)
+2018-03-25 21:38:46 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=1
+2018-03-25 21:38:46 INFO  Storage:73 - Called getBookChapters(-L8EISHNcwp9SMkOCL4S, ui.InformationView@5034c2bd)
+2018-03-25 21:38:46 INFO  Storage:201 - Added chapter: Intro
+2018-03-25 21:38:46 INFO  InformationView:223 - InformationView completion(Intro, chapters)
+2018-03-25 21:38:48 INFO  Storage:73 - Called getBookChapters(-L8OWx5IxskFfiMGUbhl, ui.InformationView@5034c2bd)
+2018-03-25 21:38:48 INFO  Storage:201 - Added chapter: SecretChapter
+2018-03-25 21:38:48 INFO  InformationView:223 - InformationView completion(SecretChapter, chapters)
+2018-03-25 21:38:48 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-25 21:38:48 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-25 21:38:48 INFO  Storage:73 - Called getBookChapters(-L8ENetYYOSk5YKOzfd8, ui.InformationView@5034c2bd)
+2018-03-25 21:38:48 INFO  Storage:201 - Added chapter: Chapter 1 of Java
+2018-03-25 21:38:48 INFO  InformationView:223 - InformationView completion(Chapter 1 of Java, chapters)
+2018-03-25 21:38:48 INFO  Storage:201 - Added chapter: Chapter 2 of Java
+2018-03-25 21:38:48 INFO  InformationView:223 - InformationView completion(Chapter 2 of Java, chapters)
+2018-03-25 21:41:09 INFO  Storage:59 - Application initialized successfully
+2018-03-25 21:41:10 DEBUG InternalLoggerFactory:47 - Using Log4J as the default logging framework
+2018-03-25 21:41:10 DEBUG InternalThreadLocalMap:51 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-03-25 21:41:10 DEBUG InternalThreadLocalMap:54 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-03-25 21:41:10 DEBUG PlatformDependent:954 - Platform: MacOS
+2018-03-25 21:41:10 DEBUG PlatformDependent0:369 - -Dio.netty.noUnsafe: false
+2018-03-25 21:41:10 DEBUG PlatformDependent0:809 - Java version: 9
+2018-03-25 21:41:10 DEBUG PlatformDependent0:113 - sun.misc.Unsafe.theUnsafe: available
+2018-03-25 21:41:10 DEBUG PlatformDependent0:137 - sun.misc.Unsafe.copyMemory: available
+2018-03-25 21:41:10 DEBUG PlatformDependent0:175 - java.nio.Buffer.address: available
+2018-03-25 21:41:10 DEBUG PlatformDependent0:236 - direct buffer constructor: available
+2018-03-25 21:41:10 DEBUG PlatformDependent0:287 - java.nio.Bits.unaligned: available, true
+2018-03-25 21:41:10 DEBUG PlatformDependent0:346 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @8552ef4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:589)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:556)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:308)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:299)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:208)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:79)
+	at io.netty.util.AsciiString.hashCode(AsciiString.java:1415)
+	at io.netty.util.AsciiString$1.hashCode(AsciiString.java:1360)
+	at io.netty.util.AsciiString$1.hashCode(AsciiString.java:1357)
+	at io.netty.handler.codec.DefaultHeaders.add(DefaultHeaders.java:297)
+	at io.netty.handler.codec.DefaultHeaders.addObject(DefaultHeaders.java:327)
+	at io.netty.handler.codec.http.DefaultHttpHeaders.add(DefaultHttpHeaders.java:117)
+	at com.google.firebase.database.connection.NettyWebSocketClient$WebSocketClientHandler.<init>(NettyWebSocketClient.java:153)
+	at com.google.firebase.database.connection.NettyWebSocketClient.<init>(NettyWebSocketClient.java:68)
+	at com.google.firebase.database.connection.WebsocketConnection$DefaultWSClientFactory.newClient(WebsocketConnection.java:435)
+	at com.google.firebase.database.connection.WebsocketConnection.<init>(WebsocketConnection.java:80)
+	at com.google.firebase.database.connection.WebsocketConnection.<init>(WebsocketConnection.java:68)
+	at com.google.firebase.database.connection.Connection$DefaultWebsocketConnectionFactory.newConnection(Connection.java:297)
+	at com.google.firebase.database.connection.Connection.<init>(Connection.java:72)
+	at com.google.firebase.database.connection.Connection.<init>(Connection.java:57)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$DefaultConnectionFactory.newConnection(PersistentConnectionImpl.java:1303)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:547)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-03-25 21:41:10 DEBUG PlatformDependent0:359 - java.nio.DirectByteBuffer.<init>(long, int): available
+2018-03-25 21:41:10 DEBUG PlatformDependent:980 - sun.misc.Unsafe: available
+2018-03-25 21:41:10 DEBUG PlatformDependent:1044 - maxDirectMemory: 2147483648 bytes (maybe)
+2018-03-25 21:41:10 DEBUG PlatformDependent:1063 - -Dio.netty.tmpdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T (java.io.tmpdir)
+2018-03-25 21:41:10 DEBUG PlatformDependent:1142 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-03-25 21:41:10 DEBUG PlatformDependent:132 - -Dio.netty.noPreferDirect: false
+2018-03-25 21:41:10 DEBUG PlatformDependent:1044 - maxDirectMemory: 2147483648 bytes (maybe)
+2018-03-25 21:41:10 DEBUG PlatformDependent:172 - -Dio.netty.maxDirectMemory: 2147483648 bytes
+2018-03-25 21:41:10 DEBUG PlatformDependent:178 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-03-25 21:41:10 DEBUG CleanerJava9:63 - java.nio.ByteBuffer.cleaner(): available
+2018-03-25 21:41:10 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 8
+2018-03-25 21:41:10 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+2018-03-25 21:41:10 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2018-03-25 21:41:10 DEBUG PlatformDependent:848 - org.jctools-core.MpscChunkedArrayQueue: available
+2018-03-25 21:41:10 DEBUG NativeLibraryLoader:67 - -Dio.netty.native.workdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T (io.netty.tmpdir)
+2018-03-25 21:41:10 DEBUG NativeLibraryLoader:238 - Unable to load the library 'netty_tcnative_osx_x86_64', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+	at java.base/java.lang.System.loadLibrary(System.java:1857)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:263)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:255)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:233)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:124)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:85)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:421)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:89)
+	at io.netty.handler.ssl.SslContext.defaultProvider(SslContext.java:118)
+	at io.netty.handler.ssl.SslContext.defaultClientProvider(SslContext.java:114)
+	at io.netty.handler.ssl.SslContext.newClientContextInternal(SslContext.java:763)
+	at io.netty.handler.ssl.SslContextBuilder.build(SslContextBuilder.java:446)
+	at com.google.firebase.database.connection.NettyWebSocketClient.connect(NettyWebSocketClient.java:82)
+	at com.google.firebase.database.connection.WebsocketConnection.open(WebsocketConnection.java:84)
+	at com.google.firebase.database.connection.Connection.open(Connection.java:79)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:548)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-03-25 21:41:10 DEBUG NativeLibraryLoader:128 - netty_tcnative_osx_x86_64 cannot be loaded from java.libary.path, now trying export to -Dio.netty.native.workdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T
+java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+	at java.base/java.lang.System.loadLibrary(System.java:1857)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:243)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:124)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:85)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:421)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:89)
+	at io.netty.handler.ssl.SslContext.defaultProvider(SslContext.java:118)
+	at io.netty.handler.ssl.SslContext.defaultClientProvider(SslContext.java:114)
+	at io.netty.handler.ssl.SslContext.newClientContextInternal(SslContext.java:763)
+	at io.netty.handler.ssl.SslContextBuilder.build(SslContextBuilder.java:446)
+	at com.google.firebase.database.connection.NettyWebSocketClient.connect(NettyWebSocketClient.java:82)
+	at com.google.firebase.database.connection.WebsocketConnection.open(WebsocketConnection.java:84)
+	at com.google.firebase.database.connection.Connection.open(Connection.java:79)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:548)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+		at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+		at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+		at java.base/java.lang.System.loadLibrary(System.java:1857)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:263)
+		at java.base/java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:255)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:233)
+		... 25 more
+2018-03-25 21:41:10 DEBUG NativeLibraryLoader:234 - Successfully loaded the library /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T/libnetty_tcnative_osx_x86_6416462410032939878445.dylib
+2018-03-25 21:41:10 DEBUG OpenSsl:120 - netty-tcnative using native library: BoringSSL
+2018-03-25 21:41:11 DEBUG ResourceLeakDetector:121 - -Dio.netty.leakDetection.level: simple
+2018-03-25 21:41:11 DEBUG ResourceLeakDetector:122 - -Dio.netty.leakDetection.targetRecords: 4
+2018-03-25 21:41:11 DEBUG AbstractByteBuf:52 - -Dio.netty.buffer.bytebuf.checkAccessible: true
+2018-03-25 21:41:11 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6364f3c9
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.numHeapArenas: 8
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.numDirectArenas: 8
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.pageSize: 8192
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:128 - -Dio.netty.allocator.maxOrder: 11
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:132 - -Dio.netty.allocator.chunkSize: 16777216
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:133 - -Dio.netty.allocator.tinyCacheSize: 512
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:134 - -Dio.netty.allocator.smallCacheSize: 256
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:135 - -Dio.netty.allocator.normalCacheSize: 64
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:136 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:137 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-03-25 21:41:11 DEBUG PooledByteBufAllocator:138 - -Dio.netty.allocator.useCacheForAllThreads: true
+2018-03-25 21:41:11 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+2018-03-25 21:41:11 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+2018-03-25 21:41:11 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2018-03-25 21:41:11 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5093ea36
+2018-03-25 21:41:11 DEBUG Recycler:96 - -Dio.netty.recycler.maxCapacityPerThread: 32768
+2018-03-25 21:41:11 DEBUG Recycler:97 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2018-03-25 21:41:11 DEBUG Recycler:98 - -Dio.netty.recycler.linkCapacity: 16
+2018-03-25 21:41:11 DEBUG Recycler:99 - -Dio.netty.recycler.ratio: 8
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 => ECDHE-ECDSA-AES128-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 => ECDHE-ECDSA-AES128-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 => ECDHE-RSA-AES128-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA256 => ECDHE-RSA-AES128-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 => ECDHE-ECDSA-AES256-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 => ECDHE-ECDSA-AES256-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 => ECDHE-RSA-AES256-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA384 => ECDHE-RSA-AES256-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA256 => AES128-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA256 => AES128-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA256 => AES256-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA256 => AES256-SHA256
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+2018-03-25 21:41:11 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+2018-03-25 21:41:11 DEBUG OpenSsl:231 - Supported protocols (OpenSSL): [[SSLv2Hello, TLSv1, TLSv1.1, TLSv1.2]] 
+2018-03-25 21:41:11 DEBUG OpenSsl:232 - Default cipher suites (OpenSSL): [TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_PSK_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_PSK_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2018-03-25 21:41:11 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 1457 (auto-detected)
+2018-03-25 21:41:11 DEBUG NetUtil:137 - -Djava.net.preferIPv4Stack: false
+2018-03-25 21:41:11 DEBUG NetUtil:138 - -Djava.net.preferIPv6Addresses: false
+2018-03-25 21:41:11 DEBUG NetUtil:222 - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+2018-03-25 21:41:11 DEBUG NetUtil:287 - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+2018-03-25 21:41:11 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: 8c:85:90:ff:fe:27:16:93 (auto-detected)
+2018-03-25 21:41:11 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2fc371bb
+2018-03-25 21:41:11 DEBUG WebSocketClientHandshaker13:140 - WebSocket version 13 client handshake key: +UAOAnlerSP0ndR05Wr5vQ==, expected response: pv9YbXEPU4+JLkkPASrKYEjN6vE=
+2018-03-25 21:41:11 DEBUG SslHandler:1478 - [id: 0xe3c54336, L:/192.168.0.104:50268 - R:realtimehandbookservce.firebaseio.com/35.201.97.85:443] HANDSHAKEN: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=132
+2018-03-25 21:41:12 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=66
+2018-03-25 21:41:12 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=191
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:41:12 INFO  Storage:68 - Called getBookList(ui.InformationView@1013bee6)
+2018-03-25 21:41:12 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=54
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=75
+2018-03-25 21:41:12 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=54
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=2559
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:41:12 INFO  Storage:155 - Added book: C++Handbook
+2018-03-25 21:41:12 INFO  InformationView:223 - InformationView completion(C++Handbook, books)
+2018-03-25 21:41:12 INFO  Storage:155 - Added book: JavaHandbook
+2018-03-25 21:41:12 INFO  InformationView:223 - InformationView completion(JavaHandbook, books)
+2018-03-25 21:41:12 INFO  Storage:155 - Added book: VladosSecretHandBook
+2018-03-25 21:41:12 INFO  InformationView:223 - InformationView completion(VladosSecretHandBook, books)
+2018-03-25 21:41:12 INFO  Storage:155 - Added book: GeneratedBook For You
+2018-03-25 21:41:12 INFO  InformationView:223 - InformationView completion(GeneratedBook For You, books)
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=2559
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-25 21:41:12 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-25 21:41:14 INFO  Storage:73 - Called getBookChapters(-L8ENetYYOSk5YKOzfd8, ui.InformationView@1013bee6)
+2018-03-25 21:41:14 INFO  Storage:201 - Added chapter: Chapter 1 of Java
+2018-03-25 21:41:14 INFO  InformationView:223 - InformationView completion(Chapter 1 of Java, chapters)
+2018-03-25 21:41:14 INFO  Storage:201 - Added chapter: Chapter 2 of Java
+2018-03-25 21:41:14 INFO  InformationView:223 - InformationView completion(Chapter 2 of Java, chapters)
+2018-03-25 21:41:16 INFO  Storage:73 - Called getBookChapters(-L8SwB6ZmNzPj2KOEH2Q, ui.InformationView@1013bee6)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter -1
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter -1, chapters)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter 1
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter 1, chapters)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter 2
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter 2, chapters)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter 3
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter 3, chapters)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter 4
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter 4, chapters)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter 5
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter 5, chapters)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter 6
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter 6, chapters)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter 7
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter 7, chapters)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter 8
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter 8, chapters)
+2018-03-25 21:41:16 INFO  Storage:201 - Added chapter: Chapter 9
+2018-03-25 21:41:16 INFO  InformationView:223 - InformationView completion(Chapter 9, chapters)
+2018-03-25 21:41:18 INFO  Storage:73 - Called getBookChapters(-L8EISHNcwp9SMkOCL4S, ui.InformationView@1013bee6)
+2018-03-25 21:41:18 INFO  Storage:201 - Added chapter: Intro
+2018-03-25 21:41:18 INFO  InformationView:223 - InformationView completion(Intro, chapters)
+2018-03-25 21:41:20 INFO  Storage:73 - Called getBookChapters(-L8ENetYYOSk5YKOzfd8, ui.InformationView@1013bee6)
+2018-03-25 21:41:20 INFO  Storage:201 - Added chapter: Chapter 1 of Java
+2018-03-25 21:41:20 INFO  InformationView:223 - InformationView completion(Chapter 1 of Java, chapters)
+2018-03-25 21:41:20 INFO  Storage:201 - Added chapter: Chapter 2 of Java
+2018-03-25 21:41:20 INFO  InformationView:223 - InformationView completion(Chapter 2 of Java, chapters)
+2018-03-26 00:03:04 INFO  Storage:59 - Application initialized successfully
+2018-03-26 00:03:05 DEBUG InternalLoggerFactory:47 - Using Log4J as the default logging framework
+2018-03-26 00:03:05 DEBUG InternalThreadLocalMap:51 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-03-26 00:03:05 DEBUG InternalThreadLocalMap:54 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-03-26 00:03:05 DEBUG PlatformDependent:954 - Platform: MacOS
+2018-03-26 00:03:05 DEBUG PlatformDependent0:369 - -Dio.netty.noUnsafe: false
+2018-03-26 00:03:05 DEBUG PlatformDependent0:809 - Java version: 9
+2018-03-26 00:03:05 DEBUG PlatformDependent0:113 - sun.misc.Unsafe.theUnsafe: available
+2018-03-26 00:03:05 DEBUG PlatformDependent0:137 - sun.misc.Unsafe.copyMemory: available
+2018-03-26 00:03:05 DEBUG PlatformDependent0:175 - java.nio.Buffer.address: available
+2018-03-26 00:03:05 DEBUG PlatformDependent0:236 - direct buffer constructor: available
+2018-03-26 00:03:05 DEBUG PlatformDependent0:287 - java.nio.Bits.unaligned: available, true
+2018-03-26 00:03:05 DEBUG PlatformDependent0:346 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @40146eb2
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:589)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:556)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:308)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:299)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:208)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:79)
+	at io.netty.util.AsciiString.hashCode(AsciiString.java:1415)
+	at io.netty.util.AsciiString$1.hashCode(AsciiString.java:1360)
+	at io.netty.util.AsciiString$1.hashCode(AsciiString.java:1357)
+	at io.netty.handler.codec.DefaultHeaders.add(DefaultHeaders.java:297)
+	at io.netty.handler.codec.DefaultHeaders.addObject(DefaultHeaders.java:327)
+	at io.netty.handler.codec.http.DefaultHttpHeaders.add(DefaultHttpHeaders.java:117)
+	at com.google.firebase.database.connection.NettyWebSocketClient$WebSocketClientHandler.<init>(NettyWebSocketClient.java:153)
+	at com.google.firebase.database.connection.NettyWebSocketClient.<init>(NettyWebSocketClient.java:68)
+	at com.google.firebase.database.connection.WebsocketConnection$DefaultWSClientFactory.newClient(WebsocketConnection.java:435)
+	at com.google.firebase.database.connection.WebsocketConnection.<init>(WebsocketConnection.java:80)
+	at com.google.firebase.database.connection.WebsocketConnection.<init>(WebsocketConnection.java:68)
+	at com.google.firebase.database.connection.Connection$DefaultWebsocketConnectionFactory.newConnection(Connection.java:297)
+	at com.google.firebase.database.connection.Connection.<init>(Connection.java:72)
+	at com.google.firebase.database.connection.Connection.<init>(Connection.java:57)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$DefaultConnectionFactory.newConnection(PersistentConnectionImpl.java:1303)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:547)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-03-26 00:03:05 DEBUG PlatformDependent0:359 - java.nio.DirectByteBuffer.<init>(long, int): available
+2018-03-26 00:03:05 DEBUG PlatformDependent:980 - sun.misc.Unsafe: available
+2018-03-26 00:03:05 DEBUG PlatformDependent:1044 - maxDirectMemory: 2147483648 bytes (maybe)
+2018-03-26 00:03:05 DEBUG PlatformDependent:1063 - -Dio.netty.tmpdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T (java.io.tmpdir)
+2018-03-26 00:03:05 DEBUG PlatformDependent:1142 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-03-26 00:03:05 DEBUG PlatformDependent:132 - -Dio.netty.noPreferDirect: false
+2018-03-26 00:03:05 DEBUG PlatformDependent:1044 - maxDirectMemory: 2147483648 bytes (maybe)
+2018-03-26 00:03:05 DEBUG PlatformDependent:172 - -Dio.netty.maxDirectMemory: 2147483648 bytes
+2018-03-26 00:03:05 DEBUG PlatformDependent:178 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-03-26 00:03:05 DEBUG CleanerJava9:63 - java.nio.ByteBuffer.cleaner(): available
+2018-03-26 00:03:05 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 8
+2018-03-26 00:03:05 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+2018-03-26 00:03:05 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2018-03-26 00:03:05 DEBUG PlatformDependent:848 - org.jctools-core.MpscChunkedArrayQueue: available
+2018-03-26 00:03:05 DEBUG NativeLibraryLoader:67 - -Dio.netty.native.workdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T (io.netty.tmpdir)
+2018-03-26 00:03:05 DEBUG NativeLibraryLoader:238 - Unable to load the library 'netty_tcnative_osx_x86_64', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+	at java.base/java.lang.System.loadLibrary(System.java:1857)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:263)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:255)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:233)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:124)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:85)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:421)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:89)
+	at io.netty.handler.ssl.SslContext.defaultProvider(SslContext.java:118)
+	at io.netty.handler.ssl.SslContext.defaultClientProvider(SslContext.java:114)
+	at io.netty.handler.ssl.SslContext.newClientContextInternal(SslContext.java:763)
+	at io.netty.handler.ssl.SslContextBuilder.build(SslContextBuilder.java:446)
+	at com.google.firebase.database.connection.NettyWebSocketClient.connect(NettyWebSocketClient.java:82)
+	at com.google.firebase.database.connection.WebsocketConnection.open(WebsocketConnection.java:84)
+	at com.google.firebase.database.connection.Connection.open(Connection.java:79)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:548)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-03-26 00:03:05 DEBUG NativeLibraryLoader:128 - netty_tcnative_osx_x86_64 cannot be loaded from java.libary.path, now trying export to -Dio.netty.native.workdir: /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T
+java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+	at java.base/java.lang.System.loadLibrary(System.java:1857)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:243)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:124)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:85)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:421)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:89)
+	at io.netty.handler.ssl.SslContext.defaultProvider(SslContext.java:118)
+	at io.netty.handler.ssl.SslContext.defaultClientProvider(SslContext.java:114)
+	at io.netty.handler.ssl.SslContext.newClientContextInternal(SslContext.java:763)
+	at io.netty.handler.ssl.SslContextBuilder.build(SslContextBuilder.java:446)
+	at com.google.firebase.database.connection.NettyWebSocketClient.connect(NettyWebSocketClient.java:82)
+	at com.google.firebase.database.connection.WebsocketConnection.open(WebsocketConnection.java:84)
+	at com.google.firebase.database.connection.Connection.open(Connection.java:79)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.openNetworkConnection(PersistentConnectionImpl.java:548)
+	at com.google.firebase.database.connection.PersistentConnectionImpl.access$800(PersistentConnectionImpl.java:37)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1$1.onSuccess(PersistentConnectionImpl.java:500)
+	at com.google.firebase.database.core.Context$1$1.onSuccess(Context.java:67)
+	at com.google.firebase.database.core.JvmAuthTokenProvider.getToken(JvmAuthTokenProvider.java:66)
+	at com.google.firebase.database.core.Context$1.getToken(Context.java:62)
+	at com.google.firebase.database.connection.PersistentConnectionImpl$1.run(PersistentConnectionImpl.java:490)
+	at com.google.firebase.database.connection.util.RetryHelper$1.run(RetryHelper.java:93)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_tcnative_osx_x86_64 in java.library.path
+		at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2541)
+		at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:873)
+		at java.base/java.lang.System.loadLibrary(System.java:1857)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:263)
+		at java.base/java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:255)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:233)
+		... 25 more
+2018-03-26 00:03:05 DEBUG NativeLibraryLoader:234 - Successfully loaded the library /var/folders/5n/cd7n55f96031952nv0bbd5n40000gn/T/libnetty_tcnative_osx_x86_6417588572743248386707.dylib
+2018-03-26 00:03:05 DEBUG OpenSsl:120 - netty-tcnative using native library: BoringSSL
+2018-03-26 00:03:05 DEBUG ResourceLeakDetector:121 - -Dio.netty.leakDetection.level: simple
+2018-03-26 00:03:05 DEBUG ResourceLeakDetector:122 - -Dio.netty.leakDetection.targetRecords: 4
+2018-03-26 00:03:05 DEBUG AbstractByteBuf:52 - -Dio.netty.buffer.bytebuf.checkAccessible: true
+2018-03-26 00:03:05 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3113aab3
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.numHeapArenas: 8
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.numDirectArenas: 8
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.pageSize: 8192
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:128 - -Dio.netty.allocator.maxOrder: 11
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:132 - -Dio.netty.allocator.chunkSize: 16777216
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:133 - -Dio.netty.allocator.tinyCacheSize: 512
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:134 - -Dio.netty.allocator.smallCacheSize: 256
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:135 - -Dio.netty.allocator.normalCacheSize: 64
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:136 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:137 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-03-26 00:03:05 DEBUG PooledByteBufAllocator:138 - -Dio.netty.allocator.useCacheForAllThreads: true
+2018-03-26 00:03:05 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+2018-03-26 00:03:05 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+2018-03-26 00:03:05 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2018-03-26 00:03:05 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7eef7140
+2018-03-26 00:03:05 DEBUG Recycler:96 - -Dio.netty.recycler.maxCapacityPerThread: 32768
+2018-03-26 00:03:05 DEBUG Recycler:97 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2018-03-26 00:03:05 DEBUG Recycler:98 - -Dio.netty.recycler.linkCapacity: 16
+2018-03-26 00:03:05 DEBUG Recycler:99 - -Dio.netty.recycler.ratio: 8
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 => ECDHE-ECDSA-AES128-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 => ECDHE-ECDSA-AES128-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 => ECDHE-RSA-AES128-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA256 => ECDHE-RSA-AES128-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 => ECDHE-ECDSA-AES256-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 => ECDHE-ECDSA-AES256-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 => ECDHE-RSA-AES256-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA384 => ECDHE-RSA-AES256-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA256 => AES128-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA256 => AES128-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA256 => AES256-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA256 => AES256-SHA256
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:316 - Cipher suite mapping: TLS_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+2018-03-26 00:03:05 DEBUG CipherSuiteConverter:317 - Cipher suite mapping: SSL_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+2018-03-26 00:03:05 DEBUG OpenSsl:231 - Supported protocols (OpenSSL): [[SSLv2Hello, TLSv1, TLSv1.1, TLSv1.2]] 
+2018-03-26 00:03:05 DEBUG OpenSsl:232 - Default cipher suites (OpenSSL): [TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_PSK_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_PSK_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2018-03-26 00:03:06 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 4920 (auto-detected)
+2018-03-26 00:03:06 DEBUG NetUtil:137 - -Djava.net.preferIPv4Stack: false
+2018-03-26 00:03:06 DEBUG NetUtil:138 - -Djava.net.preferIPv6Addresses: false
+2018-03-26 00:03:06 DEBUG NetUtil:222 - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+2018-03-26 00:03:06 DEBUG NetUtil:287 - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+2018-03-26 00:03:06 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: 8c:85:90:ff:fe:27:16:93 (auto-detected)
+2018-03-26 00:03:06 DEBUG ResourceLeakDetectorFactory:202 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5154552b
+2018-03-26 00:03:06 DEBUG WebSocketClientHandshaker13:140 - WebSocket version 13 client handshake key: AD5vuuP9D2ik+jnxQxdrZg==, expected response: TRyC68DpilGISjSeJuO2a9aVIU8=
+2018-03-26 00:03:06 DEBUG SslHandler:1478 - [id: 0x33a33980, L:/192.168.0.105:51371 - R:realtimehandbookservce.firebaseio.com/35.201.97.85:443] HANDSHAKEN: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+2018-03-26 00:03:06 INFO  Storage:68 - Called getBookList(ui.InformationView@34027d55)
+2018-03-26 00:03:06 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-26 00:03:06 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=132
+2018-03-26 00:03:06 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=66
+2018-03-26 00:03:06 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=191
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=75
+2018-03-26 00:03:07 DEBUG WebSocket08FrameEncoder:130 - Encoding WebSocket Frame opCode=1 length=54
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=1
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=16384
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=2559
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:174 - Decoding WebSocket Frame opCode=1
+2018-03-26 00:03:07 DEBUG WebSocket08FrameDecoder:282 - Decoding WebSocket Frame length=43
+2018-03-26 00:03:07 INFO  Storage:155 - Added book: C++Handbook
+2018-03-26 00:03:07 INFO  InformationView:223 - InformationView completion(C++Handbook, books)
+2018-03-26 00:03:07 INFO  Storage:155 - Added book: JavaHandbook
+2018-03-26 00:03:07 INFO  InformationView:223 - InformationView completion(JavaHandbook, books)
+2018-03-26 00:03:07 INFO  Storage:155 - Added book: VladosSecretHandBook
+2018-03-26 00:03:07 INFO  InformationView:223 - InformationView completion(VladosSecretHandBook, books)
+2018-03-26 00:03:07 INFO  Storage:155 - Added book: GeneratedBook For You
+2018-03-26 00:03:07 INFO  InformationView:223 - InformationView completion(GeneratedBook For You, books)
+2018-03-26 00:03:08 INFO  Storage:73 - Called getBookChapters(-L8SwB6ZmNzPj2KOEH2Q, ui.InformationView@34027d55)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter -1
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter -1, chapters)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter 1
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter 1, chapters)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter 2
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter 2, chapters)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter 3
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter 3, chapters)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter 4
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter 4, chapters)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter 5
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter 5, chapters)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter 6
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter 6, chapters)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter 7
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter 7, chapters)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter 8
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter 8, chapters)
+2018-03-26 00:03:08 INFO  Storage:201 - Added chapter: Chapter 9
+2018-03-26 00:03:08 INFO  InformationView:223 - InformationView completion(Chapter 9, chapters)
+2018-03-26 00:03:10 INFO  Storage:73 - Called getBookChapters(-L8EISHNcwp9SMkOCL4S, ui.InformationView@34027d55)
+2018-03-26 00:03:10 INFO  Storage:201 - Added chapter: Intro
+2018-03-26 00:03:10 INFO  InformationView:223 - InformationView completion(Intro, chapters)
+2018-03-26 00:03:11 INFO  Storage:73 - Called getBookChapters(-L8ENetYYOSk5YKOzfd8, ui.InformationView@34027d55)
+2018-03-26 00:03:11 INFO  Storage:201 - Added chapter: Chapter 1 of Java
+2018-03-26 00:03:11 INFO  InformationView:223 - InformationView completion(Chapter 1 of Java, chapters)
+2018-03-26 00:03:11 INFO  Storage:201 - Added chapter: Chapter 2 of Java
+2018-03-26 00:03:11 INFO  InformationView:223 - InformationView completion(Chapter 2 of Java, chapters)
+2018-03-26 00:03:12 INFO  Storage:73 - Called getBookChapters(-L8OWx5IxskFfiMGUbhl, ui.InformationView@34027d55)
+2018-03-26 00:03:12 INFO  Storage:201 - Added chapter: SecretChapter
+2018-03-26 00:03:12 INFO  InformationView:223 - InformationView completion(SecretChapter, chapters)
+2018-03-26 00:03:12 INFO  Storage:201 - Added chapter: Chapter 0
+2018-03-26 00:03:12 INFO  InformationView:223 - InformationView completion(Chapter 0, chapters)
+2018-03-26 00:03:15 INFO  Storage:73 - Called getBookChapters(-L8ENetYYOSk5YKOzfd8, ui.InformationView@34027d55)
+2018-03-26 00:03:15 INFO  Storage:201 - Added chapter: Chapter 1 of Java
+2018-03-26 00:03:15 INFO  InformationView:223 - InformationView completion(Chapter 1 of Java, chapters)
+2018-03-26 00:03:15 INFO  Storage:201 - Added chapter: Chapter 2 of Java
+2018-03-26 00:03:15 INFO  InformationView:223 - InformationView completion(Chapter 2 of Java, chapters)
+2018-03-26 00:03:15 INFO  Storage:73 - Called getBookChapters(-L8EISHNcwp9SMkOCL4S, ui.InformationView@34027d55)
+2018-03-26 00:03:15 INFO  Storage:201 - Added chapter: Intro
+2018-03-26 00:03:15 INFO  InformationView:223 - InformationView completion(Intro, chapters)
+2018-03-26 00:03:16 INFO  Storage:73 - Called getBookChapters(-L8SwB6ZmNzPj2KOEH2Q, ui.InformationView@34027d55)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter -1
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter -1, chapters)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter 1
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter 1, chapters)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter 2
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter 2, chapters)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter 3
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter 3, chapters)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter 4
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter 4, chapters)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter 5
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter 5, chapters)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter 6
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter 6, chapters)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter 7
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter 7, chapters)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter 8
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter 8, chapters)
+2018-03-26 00:03:16 INFO  Storage:201 - Added chapter: Chapter 9
+2018-03-26 00:03:16 INFO  InformationView:223 - InformationView completion(Chapter 9, chapters)
